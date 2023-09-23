@@ -1,0 +1,874 @@
+[
+	{
+		"english": "The sun shines.",
+		"ipa": "da puf jauʧ bigtim bi fuf."
+	},
+	{
+		"english": "The sun is shining.",
+		"ipa": "da puf jauʧ bi fuf."
+	},
+	{
+		"english": "The sun shone.",
+		"ipa": "da puf jauʧ dɪ bi fuf."
+	},
+	{
+		"english": "The sun will shine.",
+		"ipa": "da puf jauʧ gona bi fuf."
+	},
+	{
+		"english": "The sun has been shining.",
+		"ipa": "da puf jauʧ dɪ bi fuf. da puf jauʧ bi fuf."
+	},
+	{
+		"english": "The sun is shining again.",
+		"ipa": "da puf jauʧ big dɪ bi fuf. da puf jauʧ dɪ bi nu fuf. da puf jauʧ bi fuf."
+	},
+	{
+		"english": "The sun will shine tomorrow.",
+		"ipa": "da puf jauʧ gona bigtim bi fuf."
+	},
+	{
+		"english": "The sun shines brightly.",
+		"ipa": "da fuf puf jauʧ bi bigpik."
+	},
+	{
+		"english": "The bright sun shines.",
+		"ipa": "da bigpik puf jauʧ bi fuf."
+	},
+	{
+		"english": "The sun is rising now.",
+		"ipa": ""
+	},
+	{
+		"english": "All the people shouted.",
+		"ipa": ""
+	},
+	{
+		"english": "Some of the people shouted.",
+		"ipa": ""
+	},
+	{
+		"english": "Many of the people shouted twice.",
+		"ipa": ""
+	},
+	{
+		"english": "Happy people often shout.",
+		"ipa": "blib bin tinibigtim big blab."
+	},
+	{
+		"english": "The kitten jumped up.",
+		"ipa": ""
+	},
+	{
+		"english": "The kitten jumped onto the table.",
+		"ipa": ""
+	},
+	{
+		"english": "My little kitten walked away.",
+		"ipa": ""
+	},
+	{
+		"english": "It's raining.",
+		"ipa": ""
+	},
+	{
+		"english": "The rain came down.",
+		"ipa": ""
+	},
+	{
+		"english": "The kitten is playing in the rain.",
+		"ipa": ""
+	},
+	{
+		"english": "The rain has stopped.",
+		"ipa": ""
+	},
+	{
+		"english": "Soon the rain will stop.",
+		"ipa": ""
+	},
+	{
+		"english": "I hope the rain stops soon.",
+		"ipa": ""
+	},
+	{
+		"english": "Once wild animals lived here.",
+		"ipa": ""
+	},
+	{
+		"english": "Slowly she looked around.",
+		"ipa": ""
+	},
+	{
+		"english": "Go away!",
+		"ipa": "ja jit!"
+	},
+	{
+		"english": "Let's go!",
+		"ipa": "ʧi jit!"
+	},
+	{
+		"english": "You should go.",
+		"ipa": "ja jit."
+	},
+	{
+		"english": "I will be happy to go.",
+		"ipa": "mi blib gona jit."
+	},
+	{
+		"english": "He will arrive soon.",
+		"ipa": ""
+	},
+	{
+		"english": "The baby's ball has rolled away.",
+		"ipa": ""
+	},
+	{
+		"english": "The two boys are working together.",
+		"ipa": ""
+	},
+	{
+		"english": "This mist will probably clear away.",
+		"ipa": ""
+	},
+	{
+		"english": "Lovely flowers are growing everywhere.",
+		"ipa": ""
+	},
+	{
+		"english": "We should eat more slowly.",
+		"ipa": ""
+	},
+	{
+		"english": "You have come too soon.",
+		"ipa": ""
+	},
+	{
+		"english": "You must write more neatly.",
+		"ipa": ""
+	},
+	{
+		"english": "Directly opposite stands a wonderful palace.",
+		"ipa": ""
+	},
+	{
+		"english": "Henry's dog is lost.",
+		"ipa": ""
+	},
+	{
+		"english": "My cat is black.",
+		"ipa": "mi fluf bin bi tinipik."
+	},
+	{
+		"english": "The little girl's doll is broken.",
+		"ipa": ""
+	},
+	{
+		"english": "I usually sleep soundly.",
+		"ipa": ""
+	},
+	{
+		"english": "The children ran after Jack.",
+		"ipa": ""
+	},
+	{
+		"english": "I can play after school.",
+		"ipa": ""
+	},
+	{
+		"english": "We went to the village for a visit.",
+		"ipa": ""
+	},
+	{
+		"english": "We arrived at the river.",
+		"ipa": ""
+	},
+	{
+		"english": "I have been waiting for you.",
+		"ipa": ""
+	},
+	{
+		"english": "The campers sat around the fire.",
+		"ipa": ""
+	},
+	{
+		"english": "A little girl with a kitten sat near me.",
+		"ipa": ""
+	},
+	{
+		"english": "The child waited at the door for her father.",
+		"ipa": ""
+	},
+	{
+		"english": "Yesterday the oldest girl in the village lost her kitten.",
+		"ipa": ""
+	},
+	{
+		"english": "Were you born in this village?",
+		"ipa": ""
+	},
+	{
+		"english": "Can your brother dance well?",
+		"ipa": ""
+	},
+	{
+		"english": "Did the man leave?",
+		"ipa": ""
+	},
+	{
+		"english": "Is your sister coming for you?",
+		"ipa": ""
+	},
+	{
+		"english": "Can you come tomorrow?",
+		"ipa": ""
+	},
+	{
+		"english": "Have the neighbors gone away for the winter?",
+		"ipa": ""
+	},
+	{
+		"english": "Does the robin sing in the rain?",
+		"ipa": ""
+	},
+	{
+		"english": "Are you going with us to the concert?",
+		"ipa": ""
+	},
+	{
+		"english": "Have you ever travelled in the jungle?",
+		"ipa": ""
+	},
+	{
+		"english": "We sailed down the river for several miles.",
+		"ipa": ""
+	},
+	{
+		"english": "Everybody knows about hunting.",
+		"ipa": ""
+	},
+	{
+		"english": "On a sunny morning after the solstice we started for the mountains.",
+		"ipa": ""
+	},
+	{
+		"english": "Tom laughed at the monkey's tricks.",
+		"ipa": ""
+	},
+	{
+		"english": "An old man with a walking stick stood beside the fence.",
+		"ipa": ""
+	},
+	{
+		"english": "The squirrel's nest was hidden by drooping boughs.",
+		"ipa": ""
+	},
+	{
+		"english": "The little seeds waited patiently under the snow for the warm spring sun.",
+		"ipa": ""
+	},
+	{
+		"english": "Many little girls with wreaths of flowers on their heads danced around the bonfire.",
+		"ipa": ""
+	},
+	{
+		"english": "The cover of the basket fell to the floor.",
+		"ipa": ""
+	},
+	{
+		"english": "The first boy in the line stopped at the entrance.",
+		"ipa": ""
+	},
+	{
+		"english": "On the top of the hill in a little hut lived a wise old woman.",
+		"ipa": ""
+	},
+	{
+		"english": "During our residence in the country we often walked in the pastures.",
+		"ipa": ""
+	},
+	{
+		"english": "When will your guests from the city arrive?",
+		"ipa": ""
+	},
+	{
+		"english": "Near the mouth of the river, its course turns sharply towards the East.",
+		"ipa": ""
+	},
+	{
+		"english": "Between the two lofty mountains lay a fertile valley.",
+		"ipa": ""
+	},
+	{
+		"english": "Among the wheat grew tall red poppies.",
+		"ipa": ""
+	},
+	{
+		"english": "The strong roots of the oak trees were torn from the ground.",
+		"ipa": ""
+	},
+	{
+		"english": "The sun looked down through the branches upon the children at play.",
+		"ipa": ""
+	},
+	{
+		"english": "The west wind blew across my face like a friendly caress.",
+		"ipa": ""
+	},
+	{
+		"english": "The spool of thread rolled across the floor.",
+		"ipa": ""
+	},
+	{
+		"english": "A box of growing plants stood in the window.",
+		"ipa": ""
+	},
+	{
+		"english": "I am very happy.",
+		"ipa": ""
+	},
+	{
+		"english": "These oranges are juicy.",
+		"ipa": ""
+	},
+	{
+		"english": "Sea water is salty.",
+		"ipa": ""
+	},
+	{
+		"english": "The streets are full of people.",
+		"ipa": ""
+	},
+	{
+		"english": "Sugar tastes sweet.",
+		"ipa": ""
+	},
+	{
+		"english": "The fire feels hot.",
+		"ipa": ""
+	},
+	{
+		"english": "The little girl seemed lonely.",
+		"ipa": ""
+	},
+	{
+		"english": "The little boy's father had once been a sailor.",
+		"ipa": ""
+	},
+	{
+		"english": "I have lost my blanket.",
+		"ipa": ""
+	},
+	{
+		"english": "A robin has built his nest in the apple tree.",
+		"ipa": ""
+	},
+	{
+		"english": "At noon we ate our lunch by the roadside.",
+		"ipa": ""
+	},
+	{
+		"english": "Mr. Jones made a knife for his little boy.",
+		"ipa": ""
+	},
+	{
+		"english": "Their voices sound very happy.",
+		"ipa": ""
+	},
+	{
+		"english": "Is today Monday?",
+		"ipa": ""
+	},
+	{
+		"english": "Have all the leaves fallen from the tree?",
+		"ipa": ""
+	},
+	{
+		"english": "Will you be ready on time?",
+		"ipa": ""
+	},
+	{
+		"english": "Will you send this message for me?",
+		"ipa": ""
+	},
+	{
+		"english": "Are you waiting for me?",
+		"ipa": ""
+	},
+	{
+		"english": "Is this the first kitten of the litter?",
+		"ipa": ""
+	},
+	{
+		"english": "Are these shoes too big for you?",
+		"ipa": ""
+	},
+	{
+		"english": "How wide is the River?",
+		"ipa": ""
+	},
+	{
+		"english": "Listen.",
+		"ipa": ""
+	},
+	{
+		"english": "Sit here by me.",
+		"ipa": ""
+	},
+	{
+		"english": "Keep this secret until tomorrow.",
+		"ipa": ""
+	},
+	{
+		"english": "Come with us.",
+		"ipa": ""
+	},
+	{
+		"english": "Bring your friends with you.",
+		"ipa": ""
+	},
+	{
+		"english": "Be careful.",
+		"ipa": ""
+	},
+	{
+		"english": "Have some tea.",
+		"ipa": ""
+	},
+	{
+		"english": "Pip and his dog were great friends.",
+		"ipa": ""
+	},
+	{
+		"english": "John and Elizabeth are brother and sister.",
+		"ipa": ""
+	},
+	{
+		"english": "You and I will go together.",
+		"ipa": ""
+	},
+	{
+		"english": "They opened all the doors and windows.",
+		"ipa": ""
+	},
+	{
+		"english": "He is small, but strong.",
+		"ipa": ""
+	},
+	{
+		"english": "Is this tree an oak or a maple?",
+		"ipa": ""
+	},
+	{
+		"english": "Does the sky look blue or gray?",
+		"ipa": ""
+	},
+	{
+		"english": "Come with your father or mother.",
+		"ipa": ""
+	},
+	{
+		"english": "I am tired, but very happy.",
+		"ipa": ""
+	},
+	{
+		"english": "He played a tune on his wonderful flute.",
+		"ipa": ""
+	},
+	{
+		"english": "Toward the end of August the days grow much shorter.",
+		"ipa": ""
+	},
+	{
+		"english": "A company of soldiers marched over the hill and across the meadow.",
+		"ipa": ""
+	},
+	{
+		"english": "The first part of the story is very interesting.",
+		"ipa": ""
+	},
+	{
+		"english": "The crow dropped some pebbles into the pitcher and raised the water to the brim.",
+		"ipa": ""
+	},
+	{
+		"english": "The baby clapped her hands and laughed in glee.",
+		"ipa": ""
+	},
+	{
+		"english": "Stop your game and be quiet.",
+		"ipa": ""
+	},
+	{
+		"english": "The sound of the drums grew louder and louder.",
+		"ipa": ""
+	},
+	{
+		"english": "Do you like summer or winter better?",
+		"ipa": ""
+	},
+	{
+		"english": "That boy will have a wonderful trip.",
+		"ipa": ""
+	},
+	{
+		"english": "They popped corn, and then sat around the fire and ate it.",
+		"ipa": ""
+	},
+	{
+		"english": "They won the first two games, but lost the last one.",
+		"ipa": ""
+	},
+	{
+		"english": "Take this note, carry it to your mother; and wait for an answer.",
+		"ipa": ""
+	},
+	{
+		"english": "I awoke early, dressed hastily, and went down to breakfast.",
+		"ipa": ""
+	},
+	{
+		"english": "Aha! I have caught you!",
+		"ipa": ""
+	},
+	{
+		"english": "This string is too short!",
+		"ipa": ""
+	},
+	{
+		"english": "Oh, dear! the wind has blown my hat away!",
+		"ipa": ""
+	},
+	{
+		"english": "Alas! that news is sad indeed!",
+		"ipa": ""
+	},
+	{
+		"english": "Whew! that cold wind freezes my nose!",
+		"ipa": ""
+	},
+	{
+		"english": "Are you warm enough now?",
+		"ipa": ""
+	},
+	{
+		"english": "They heard the warning too late.",
+		"ipa": ""
+	},
+	{
+		"english": "We are a brave people, and love our country.",
+		"ipa": ""
+	},
+	{
+		"english": "All the children came except Mary.",
+		"ipa": ""
+	},
+	{
+		"english": "Jack seized a handful of pebbles and threw them into the lake.",
+		"ipa": ""
+	},
+	{
+		"english": "This cottage stood on a low hill, at some distance from the village.",
+		"ipa": ""
+	},
+	{
+		"english": "On a fine summer evening, the two old people were sitting outside the door of their cottage.",
+		"ipa": ""
+	},
+	{
+		"english": "Our bird's name is Jacko.",
+		"ipa": ""
+	},
+	{
+		"english": "The river knows the way to the sea.",
+		"ipa": ""
+	},
+	{
+		"english": "The boat sails away, like a bird on the wing.",
+		"ipa": ""
+	},
+	{
+		"english": "They looked cautiously about, but saw nothing.",
+		"ipa": ""
+	},
+	{
+		"english": "The little house had three rooms, a sitting room, a bedroom, and a tiny kitchen.",
+		"ipa": ""
+	},
+	{
+		"english": "We visited my uncle's village, the largest village in the world.",
+		"ipa": ""
+	},
+	{
+		"english": "We learn something new each day.",
+		"ipa": ""
+	},
+	{
+		"english": "The market begins five minutes earlier this week.",
+		"ipa": ""
+	},
+	{
+		"english": "Did you find the distance too great?",
+		"ipa": ""
+	},
+	{
+		"english": "Hurry, children.",
+		"ipa": ""
+	},
+	{
+		"english": "Madam, I will obey your command.",
+		"ipa": ""
+	},
+	{
+		"english": "Here under this tree they gave their guests a splendid feast.",
+		"ipa": ""
+	},
+	{
+		"english": "In winter I get up at night, and dress by yellow candlelight.",
+		"ipa": ""
+	},
+	{
+		"english": "Tell the last part of that story again.",
+		"ipa": ""
+	},
+	{
+		"english": "Be quick or you will be too late.",
+		"ipa": ""
+	},
+	{
+		"english": "Will you go with us or wait here?",
+		"ipa": ""
+	},
+	{
+		"english": "She was always, shabby, often ragged, and on cold days very uncomfortable.",
+		"ipa": ""
+	},
+	{
+		"english": "Think first and then act.",
+		"ipa": ""
+	},
+	{
+		"english": "I stood, a little mite of a girl, upon a chair by the window, and watched the falling snowflakes.",
+		"ipa": ""
+	},
+	{
+		"english": "Show the guests these shells, my son, and tell them their strange history.",
+		"ipa": ""
+	},
+	{
+		"english": "Be satisfied with nothing but your best.",
+		"ipa": ""
+	},
+	{
+		"english": "We consider them our faithful friends.",
+		"ipa": ""
+	},
+	{
+		"english": "We will make this place our home.",
+		"ipa": ""
+	},
+	{
+		"english": "The squirrels make their nests warm and snug with soft moss and leaves.",
+		"ipa": ""
+	},
+	{
+		"english": "The little girl made the doll's dress herself.",
+		"ipa": ""
+	},
+	{
+		"english": "I hurt myself.",
+		"ipa": ""
+	},
+	{
+		"english": "She was talking to herself.",
+		"ipa": ""
+	},
+	{
+		"english": "He proved himself trustworthy.",
+		"ipa": ""
+	},
+	{
+		"english": "We could see ourselves in the water.",
+		"ipa": ""
+	},
+	{
+		"english": "Do it yourself.",
+		"ipa": ""
+	},
+	{
+		"english": "I feel ashamed of myself.",
+		"ipa": ""
+	},
+	{
+		"english": "Sit here by yourself.",
+		"ipa": ""
+	},
+	{
+		"english": "The dress of the little princess was embroidered with roses, the national flower of the Country.",
+		"ipa": ""
+	},
+	{
+		"english": "They wore red caps, the symbol of liberty.",
+		"ipa": ""
+	},
+	{
+		"english": "With him as our protector, we fear no danger.",
+		"ipa": ""
+	},
+	{
+		"english": "All her finery, lace, ribbons, and feathers, was packed away in a trunk.",
+		"ipa": ""
+	},
+	{
+		"english": "Light he thought her, like a feather.",
+		"ipa": ""
+	},
+	{
+		"english": "Every spring and fall our cousins pay us a long visit.",
+		"ipa": ""
+	},
+	{
+		"english": "In our climate the grass remains green all winter.",
+		"ipa": ""
+	},
+	{
+		"english": "The boy who brought the book has gone.",
+		"ipa": ""
+	},
+	{
+		"english": "These are the flowers that you ordered.",
+		"ipa": ""
+	},
+	{
+		"english": "I have lost the book that you gave me.",
+		"ipa": ""
+	},
+	{
+		"english": "The fisherman who owned the boat now demanded payment.",
+		"ipa": ""
+	},
+	{
+		"english": "Come when you are called.",
+		"ipa": ""
+	},
+	{
+		"english": "I shall stay at home if it rains.",
+		"ipa": ""
+	},
+	{
+		"english": "When he saw me, he stopped.",
+		"ipa": ""
+	},
+	{
+		"english": "Do not laugh at me because I seem so absent minded.",
+		"ipa": ""
+	},
+	{
+		"english": "I shall lend you the books that you need.",
+		"ipa": ""
+	},
+	{
+		"english": "Come early next Monday if you can.",
+		"ipa": ""
+	},
+	{
+		"english": "If you come early, wait in the hall.",
+		"ipa": ""
+	},
+	{
+		"english": "I had a younger brother whose name was Antonio.",
+		"ipa": ""
+	},
+	{
+		"english": "Gnomes are little men who live under the ground.",
+		"ipa": ""
+	},
+	{
+		"english": "He is loved by everybody, because he has a gentle disposition.",
+		"ipa": ""
+	},
+	{
+		"english": "Hold the horse while I run and get my cap.",
+		"ipa": ""
+	},
+	{
+		"english": "I have found the ring I lost.",
+		"ipa": ""
+	},
+	{
+		"english": "Play and I will sing.",
+		"ipa": ""
+	},
+	{
+		"english": "That is the funniest story I ever heard.",
+		"ipa": ""
+	},
+	{
+		"english": "She is taller than her brother.",
+		"ipa": ""
+	},
+	{
+		"english": "They are no wiser than we.",
+		"ipa": ""
+	},
+	{
+		"english": "Light travels faster than sound.",
+		"ipa": ""
+	},
+	{
+		"english": "We have more time than they.",
+		"ipa": ""
+	},
+	{
+		"english": "She has more friends than enemies.",
+		"ipa": ""
+	},
+	{
+		"english": "He was very poor, and with his wife and five children lived in a little low cabin of logs and stones.",
+		"ipa": ""
+	},
+	{
+		"english": "When the wind blew, the traveler wrapped his mantle more closely around him.",
+		"ipa": ""
+	},
+	{
+		"english": "I am sure that we can go.",
+		"ipa": ""
+	},
+	{
+		"english": "We went back to the place where we saw the roses.",
+		"ipa": ""
+	},
+	{
+		"english": "\"This tree is fifty feet high,\" said the gardener.",
+		"ipa": ""
+	},
+	{
+		"english": "I think that this train leaves five minutes earlier today.",
+		"ipa": ""
+	},
+	{
+		"english": "My opinion is that the governor will grant him a pardon.",
+		"ipa": ""
+	},
+	{
+		"english": "Why he has left the city is a mystery.",
+		"ipa": ""
+	},
+	{
+		"english": "The house stands where three roads meet.",
+		"ipa": ""
+	},
+	{
+		"english": "He has far more money than brains.",
+		"ipa": ""
+	},
+	{
+		"english": "Evidently that gate is never opened, for the long grass and the great hemlocks grow close against it.",
+		"ipa": ""
+	},
+	{
+		"english": "I met a little cottage girl; she was eight years old, she said.",
+		"ipa": ""
+	}
+]

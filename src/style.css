@@ -1,0 +1,42 @@
+html, body
+{
+	font-family: sans-serif;
+}
+
+a, a:visited
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+@media (prefers-color-scheme: light)
+{
+	html, body
+	{
+		color: #111112;
+		background-color: #DDDDDE;
+	}
+	
+	a, a:visited
+	{
+		color: #496cad;
+	}
+}
+
+@media (prefers-color-scheme: dark)
+{
+	html, body
+	{
+		color: #CCCCCD;
+		background-color: #222223;
+	}
+	
+	a, a:visited
+	{
+		color: #84a9ec;
+	}
+}
