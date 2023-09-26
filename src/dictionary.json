@@ -207,7 +207,7 @@
 	],
 	"fru": [
 		{
-			"definition": "Red, including red shades of magenta and yellow.",
+			"definition": "Red, including red shades of magenta and orange.",
 			"type": "adjective"
 		}
 	],
@@ -319,6 +319,12 @@
 		{
 			"definition": "Negation of the following.",
 			"type": "adverb"
+		}
+	],
+	"nudfru": [
+		{
+			"definition": "Yellow, including shades of orange and lime.",
+			"type": "adjective"
 		}
 	],
 	"nudl": [
