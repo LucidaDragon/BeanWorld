@@ -179,6 +179,16 @@
 			"type": "noun"
 		}
 	],
+	"fin": [
+		{
+			"definition": "To stop, finish, or end.",
+			"type": "verb"
+		},
+		{
+			"definition": "End or final stage.",
+			"type": "noun"
+		}
+	],
 	"flu": [
 		{
 			"definition": "A flying thing.",
@@ -354,6 +364,16 @@
 	"puf": [
 		{
 			"definition": "Air or sky.",
+			"type": "noun"
+		}
+	],
+	"set": [
+		{
+			"definition": "To begin or start.",
+			"type": "verb"
+		},
+		{
+			"definition": "Beginning or first stage.",
 			"type": "noun"
 		}
 	],
