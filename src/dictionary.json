@@ -283,6 +283,16 @@
 			"type": "noun"
 		}
 	],
+	"ipi": [
+		{
+			"definition": "To pass out or become unconscious.",
+			"type": "verb"
+		},
+		{
+			"definition": "An extremely sleepy thing.",
+			"type": "adjective"
+		}
+	],
 	"ja": [
 		{
 			"definition": "The person or people being spoken or narrated to.",
