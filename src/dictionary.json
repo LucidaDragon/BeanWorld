@@ -393,6 +393,12 @@
 			"type": "verb"
 		}
 	],
+	"pip": [
+		{
+			"definition": "Eye or eyes.",
+			"type": "noun"
+		}
+	],
 	"puf": [
 		{
 			"definition": "Air or sky.",
