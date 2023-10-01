@@ -1,4 +1,4 @@
-import json, os, re, shutil, sys
+import json, os, re, shutil, xml.dom.minidom
 
 CURRENT_DIRECTORY = __file__[:__file__.replace("\\", "/").rindex("/")]
 os.chdir(CURRENT_DIRECTORY)
@@ -8,12 +8,14 @@ DESCRIPTION_LENGTH = 200
 
 SOURCE_DIRECTORY = "./src"
 
+PHONETICS_SOURCE = f"{SOURCE_DIRECTORY}/phonetics-template.xml"
 DICTIONARY_SOURCE = f"{SOURCE_DIRECTORY}/dictionary.json"
 ORTHOGRAPHY_SOURCE = f"{SOURCE_DIRECTORY}/orthography.json"
 EXAMPLES_SOURCE = f"{SOURCE_DIRECTORY}/examples.json"
 
 OUTPUT_DIRECTORY = "./output"
 
+PHONETICS_PAGE = f"{OUTPUT_DIRECTORY}/phonetics.html"
 DICTIONARY_DIRECTORY = f"{OUTPUT_DIRECTORY}/dictionary"
 EXAMPLES_PAGE = f"{OUTPUT_DIRECTORY}/examples.html"
 
@@ -129,6 +131,44 @@ def build_markdown() -> None:
 					stream.write("</body></html>")
 		break
 
+def build_phonetics() -> None:
+	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
+	shutil.copyfile(PHONETICS_SOURCE, PHONETICS_PAGE)
+	
+	with open(ORTHOGRAPHY_SOURCE, "r", encoding="utf-8") as stream:
+		orthography: dict[str, str] = json.load(stream)
+	
+	dom: xml.dom.minidom.Document = xml.dom.minidom.parse(PHONETICS_SOURCE)
+	node: xml.dom.minidom.Element
+	
+	for child in dom.getElementsByTagName("th"):
+		node = child
+		if len(node.childNodes) == 0:
+			text = xml.dom.minidom.Text()
+			text.nodeValue = ""
+			node.appendChild(text)
+	
+	for child in dom.getElementsByTagName("td"):
+		node = child
+		if len(node.childNodes) == 0:
+			text = xml.dom.minidom.Text()
+			text.nodeValue = ""
+			node.appendChild(text)
+		else:
+			for child in node.childNodes:
+				if isinstance(child, xml.dom.minidom.Text):
+					if not child.wholeText in orthography:
+						child.nodeValue = ""
+					else:
+						child.nodeValue = f"/{child.wholeText}/ {orthography[child.wholeText]}"
+	
+	with open(PHONETICS_PAGE, "wb") as stream:
+		root: xml.dom.minidom.Element = dom.getElementsByTagName("body")[0]
+		stream.write("<!DOCTYPE html>\n<html>\n".encode("utf-8"))
+		stream.write(get_html_header("Phonetics", SITE_NAME, "Phonetic inventory and orthography.").encode("utf-8"))
+		stream.write(root.toxml(encoding="utf-8"))
+		stream.write("\n</html>".encode("utf-8"))
+
 def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
 	os.makedirs(DICTIONARY_DIRECTORY, exist_ok=True)
 	
@@ -194,6 +234,7 @@ def build_files(filter: list[str]) -> None:
 				shutil.copyfile(f"{SOURCE_DIRECTORY}/{file}", f"{OUTPUT_DIRECTORY}/{file}")
 		break
 
+build_phonetics()
 build_markdown()
 build_dictionary(build_examples())
 build_files(["html", "css", "js", "png"])

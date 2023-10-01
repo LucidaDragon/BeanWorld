@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<th colspan="2">Front</th>
+					<th colspan="2"></th>
+					<th colspan="2"></th>
+					<th colspan="2"></th>
+					<th colspan="2">Back</th>
+				</tr>
+				<tr>
+					<th>Close</th>
+					<td>i</td>
+					<td>y</td>
+					<td></td>
+					<td></td>
+					<td>ɨ</td>
+					<td>ʉ</td>
+					<td></td>
+					<td></td>
+					<td>ɯ</td>
+					<td>u</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+					<td></td>
+					<td>ɪ</td>
+					<td>ʏ</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>ʊ</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Close-mid</th>
+					<td>e</td>
+					<td>ø</td>
+					<td></td>
+					<td></td>
+					<td>ɘ</td>
+					<td>ɵ</td>
+					<td></td>
+					<td></td>
+					<td>ɤ</td>
+					<td>o</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td colspan="2">ə</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Open-mid</th>
+					<td>ɛ</td>
+					<td>œ</td>
+					<td></td>
+					<td></td>
+					<td>ɜ</td>
+					<td>ɞ</td>
+					<td></td>
+					<td></td>
+					<td>ʌ</td>
+					<td>ɔ</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>æ</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td colspan="2">ɐ</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Open</th>
+					<td>a</td>
+					<td>ɶ</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>ɑ</td>
+					<td>ɒ</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<th colspan="2">Bilabial</th>
+					<th colspan="2">Labiodental</th>
+					<th colspan="2">Dental</th>
+					<th colspan="2">Alveolar</th>
+					<th colspan="2">Post alveolar</th>
+					<th colspan="2">Retroflex</th>
+					<th colspan="2">Palatal</th>
+					<th colspan="2">Velar</th>
+					<th colspan="2">Uvular</th>
+					<th colspan="2">Pharyngeal</th>
+					<th colspan="2">Glottal</th>
+				</tr>
+				<tr>
+					<th>Plosive</th>
+					<td>p</td>
+					<td>b</td>
+					<td></td><td></td>
+					<td colspan="3">t</td>
+					<td colspan="3">d</td>
+					<td>ʈ</td>
+					<td>ɖ</td>
+					<td>c</td>
+					<td>ɟ</td>
+					<td>k</td>
+					<td>g</td>
+					<td>q</td>
+					<td>ɢ</td>
+					<td></td>
+					<td></td>
+					<td>ʔ</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Nasal</th>
+					<td></td><td>m</td>
+					<td></td><td>ɱ</td>
+					<td colspan="3"></td><td colspan="3">n</td>
+					<td></td><td>ɳ</td>
+					<td></td><td>ɲ</td>
+					<td></td><td>ŋ</td>
+					<td></td><td>ɴ</td>
+					<td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<th>Trill</th>
+					<td></td><td>ʙ</td>
+					<td></td><td></td>
+					<td colspan="3"></td><td colspan="3">r</td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td>ʀ</td>
+					<td></td><td></td>
+					<td></td><td></td>
+				</tr>
+				<tr>
+					<th>Tap or Flap</th>
+					<td></td><td></td>
+					<td></td><td>ⱱ</td>
+					<td colspan="3"></td><td colspan="3">ɾ</td>
+					<td></td><td>ɽ</td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+				</tr>
+				<tr>
+					<th>Fricative</th>
+					<td>ɸ</td>
+					<td>β</td>
+					<td>f</td>
+					<td>v</td>
+					<td>θ</td>
+					<td>ð</td>
+					<td>s</td>
+					<td>z</td>
+					<td>ʃ</td>
+					<td>ʒ</td>
+					<td>ʂ</td>
+					<td>ʐ</td>
+					<td>ç</td>
+					<td>ʝ</td>
+					<td>x</td>
+					<td>ɣ</td>
+					<td>χ</td>
+					<td>ʁ</td>
+					<td>ħ</td>
+					<td>ʕ</td>
+					<td>h</td>
+					<td>ɦ</td>
+				</tr>
+				<tr>
+					<th>Lateral Fricative</th>
+					<td></td><td></td><td></td><td></td>
+					<td colspan="3">ɬ</td>
+					<td colspan="3">ɮ</td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<th>Approximant</th>
+					<td></td><td></td>
+					<td></td><td>ʋ</td>
+					<td colspan="3"></td><td colspan="3">ɹ</td>
+					<td></td><td>ɻ</td>
+					<td></td><td>j</td>
+					<td></td><td>ɰ</td>
+					<td></td><td></td>
+					<td></td><td></td>
+					<td></td><td></td>
+				</tr>
+				<tr>
+					<th>Lateral Approximant</th>
+					<td></td><td></td><td></td><td></td>
+					<td colspan="3"></td><td colspan="3">l</td>
+					<td></td><td>ɭ</td>
+					<td></td><td>ʎ</td>
+					<td></td><td>ʟ</td>
+					<td></td><td></td>
+					<td></td><td></td><td></td><td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
