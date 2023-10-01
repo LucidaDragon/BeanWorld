@@ -14,8 +14,8 @@ This is expressed in the saying `snut tini, nu brɛd big` or `ja snut bi tini, j
 ### Terrestrial
 Traditional bean settlements are constructed out of sticks and leaves on the floor of a forest, with one set of structures for each pair of parents and another set of structures for every few adolescents. Additional structures are often built for storing food and providing a place for the sick to recover.
 
-### Aerial
-In forested locations with especially prevalent terrestrial predators, beans have adapted their settlements by moving them up into the trees. The lower branches of trees are used as a support structure for lighter sticks, creating a raised platform upon which a leafy roof and walls can be built. Many aerial settlements are built in such a way that it is possible to move between any of the structures without ever having to touch the ground.
+### Arboreal
+In forested locations with especially prevalent terrestrial predators, beans have adapted their settlements by moving them up into the trees. The lower branches of trees are used as a support structure for lighter sticks, creating a raised platform upon which a leafy roof and walls can be built. Many arboreal settlements are built in such a way that it is possible to move between any of the structures without ever having to touch the ground.
 
 ### Semisubterranean
 In locations where large trees are unavailable, beans resort to digging mounds out of the ground for shelter. While difficult to construct when compared to stick structures, they are much more resilient.
