@@ -543,6 +543,16 @@
 			"type": "adverb"
 		}
 	],
+	"tu": [
+		{
+			"definition": "To come.",
+			"type": "verb"
+		},
+		{
+			"definition": "An action occurring toward.",
+			"type": "adverb"
+		}
+	],
 	"zum": [
 		{
 			"definition": "Fast, quick, or high velocity.",
