@@ -1,4 +1,5 @@
 import json, os, re, shutil, xml.dom.minidom
+from typing import cast
 
 CURRENT_DIRECTORY = __file__[:__file__.replace("\\", "/").rindex("/")]
 os.chdir(CURRENT_DIRECTORY)
@@ -19,12 +20,19 @@ PHONETICS_PAGE = f"{OUTPUT_DIRECTORY}/phonetics.html"
 DICTIONARY_DIRECTORY = f"{OUTPUT_DIRECTORY}/dictionary"
 EXAMPLES_PAGE = f"{OUTPUT_DIRECTORY}/examples.html"
 
+WORD_REGEX = re.compile(r"[^\0-\46\50-\100\133-\140\173-\177]+")
+
 shutil.rmtree(OUTPUT_DIRECTORY)
 
+with open(DICTIONARY_SOURCE, "r", encoding="utf-8") as stream:
+	DICTIONARY: dict[str, list[dict[str, str | list]]] = json.load(stream)
+
 with open(ORTHOGRAPHY_SOURCE, "r", encoding="utf-8") as stream:
-	ORTHOGRAPHY = json.load(stream)
+	ORTHOGRAPHY: dict[str, str] = json.load(stream)
 
 def ipa_to_orthography(ipa: str) -> str:
+	if ipa.startswith("'") and ipa.endswith("'"): return ipa[1:-1]
+	
 	result: list[str] = []
 	for c in ipa:
 		if ord(c) <= 64:
@@ -43,14 +51,16 @@ def escape(text: str) -> str:
 	return text.replace("&", "&amp;").replace("\"", "&quot;").replace("'", "&apos;").replace("<", "&lt;").replace(">", "&gt;")
 
 def word_to_link(ipa: str, text: str, tooltip: str | None = None, relative_to: str = ".") -> str:
-	def tooltip_attribute() -> str: return f"title=\"{escape(tooltip)}\" "
-	return f"<a {tooltip_attribute() if tooltip != None else ''}href=\"{escape(relative_to)}{escape(DICTIONARY_DIRECTORY[len(OUTPUT_DIRECTORY):])}/{escape(ipa.strip())}.html\">{escape(text)}</a>"
+	if ipa.startswith("'") and ipa.endswith("'"): return f"<i>{escape(text)}</i>"
+	def tooltip_attribute() -> str: return f"title=\"{escape(cast(str, tooltip))}\" "
+	if ipa in DICTIONARY: return f"<a {tooltip_attribute() if tooltip != None else ''}href=\"{escape(relative_to)}{escape(DICTIONARY_DIRECTORY[len(OUTPUT_DIRECTORY):])}/{escape(ipa.strip())}.html\">{escape(text)}</a>"
+	else: return f"<u {tooltip_attribute() if tooltip != None else ''}>{escape(text)}</u>"
 
 def extract_words(ipas: str) -> list[str]:
-	return re.findall(r"[^\0-\100\133-\140\173-\177]+", ipas)
+	return WORD_REGEX.findall(ipas)
 
 def words_to_links(ipas: str, relative_to: str = ".") -> str:
-	return re.sub(r"[^\0-\100\133-\140\173-\177]+", lambda match: word_to_link(match[0], ipa_to_orthography(match[0]), tooltip=match[0], relative_to=relative_to), ipas)
+	return WORD_REGEX.sub(lambda match: word_to_link(match[0], ipa_to_orthography(match[0]), tooltip=match[0], relative_to=relative_to), ipas)
 
 def get_html_header(page_title: str, group_title: str, description: str, type: str = "website", css: str = "style.css", **kwargs) -> str:
 	metadata = { "og:type": type, "og:title": page_title, "og:site_name": group_title, "og:description": description }
@@ -172,17 +182,15 @@ def build_phonetics() -> None:
 def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
 	os.makedirs(DICTIONARY_DIRECTORY, exist_ok=True)
 	
-	with open(DICTIONARY_SOURCE, "r", encoding="utf-8") as stream:
-		words: dict[str, list[dict[str, str | list]]] = json.load(stream)
-	
-	for ipa in words:
+	for ipa in DICTIONARY:
 		with open(f"{DICTIONARY_DIRECTORY}/{ipa}.html", "w", encoding="utf-8") as stream:
 			stream.write("<!DOCTYPE html><html>")
 			stream.write(get_html_header(ipa_to_orthography(ipa), SITE_NAME, f"/{ipa}/ Definition & Examples", css="../style.css"))
 			stream.write(f"<body><h1>{escape(ipa_to_orthography(ipa))}</h1><p>/{escape(ipa)}/</p>")
 			
-			for entry in words[ipa]:
-				stream.write(f"<h2>{escape(entry['type'])}</h2><p>{escape(entry['definition'])}</p>\n\n")
+			for entry in DICTIONARY[ipa]:
+				if not isinstance(entry["type"], str): raise ValueError(f"Expected string in type field but got {str(entry['type'])}.")
+				stream.write(f"<h2>{escape(entry['type'])}</h2><p>{escape(cast(str, entry['definition']))}</p>\n\n")
 				
 			if ipa in examples:
 				stream.write("<h2>Examples</h2><table>")
@@ -199,7 +207,7 @@ def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
 		stream.write(get_html_header("Dictionary", SITE_NAME, "Browse the dictionary.", css="../style.css"))
 		stream.write("<body><h1>Dictionary</h1><p>See the <a href=\"../examples.html\">examples</a> for a list of examples.</p>")
 		
-		for ipa in words:
+		for ipa in DICTIONARY:
 			stream.write(words_to_links(ipa, ".."))
 			stream.write("<br>")
 		
