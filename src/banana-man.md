@@ -1,4 +1,4 @@
-Do you see banana man? `ja pɪk nudl frut bin?`
+Do you see banana man? `ja pik nudl frut bin?`
 Hopping over on de white hot sand `ʧu jit bigpik fuf dɪɲk`
 Here he come with some for me `ʧu bin jit mi`
 Freshly taken from banana tree `nudl frut lif gɪb ʧu`
