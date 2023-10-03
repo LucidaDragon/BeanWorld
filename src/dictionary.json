@@ -347,6 +347,16 @@
 			"type": "adjective"
 		}
 	],
+	"luf": [
+		{
+			"definition": "To get lost or disoriented.",
+			"type": "verb"
+		},
+		{
+			"definition": "A lost or disoriented thing.",
+			"type": "adjective"
+		}
+	],
 	"mi": [
 		{
 			"definition": "The speaker or narrator of the phrase.",
