@@ -21,6 +21,12 @@ a:hover
 		background-color: #DDDDDE;
 	}
 	
+	u
+	{
+		border-bottom: 1px dotted #111112;
+		text-decoration: none;
+	}
+	
 	a, a:visited
 	{
 		color: #496cad;
@@ -33,6 +39,12 @@ a:hover
 	{
 		color: #CCCCCD;
 		background-color: #222223;
+	}
+	
+	u
+	{
+		border-bottom: 1px dotted #CCCCCD;
+		text-decoration: none;
 	}
 	
 	a, a:visited

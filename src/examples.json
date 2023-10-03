@@ -13,7 +13,7 @@
 	},
 	{
 		"english": "The sun will shine.",
-		"ipa": "da puf jauʧ gona bi fuf."
+		"ipa": "da puf jauʧ gəuna bi fuf."
 	},
 	{
 		"english": "The sun has been shining.",
@@ -25,7 +25,7 @@
 	},
 	{
 		"english": "The sun will shine tomorrow.",
-		"ipa": "da puf jauʧ gona bigtim bi fuf."
+		"ipa": "da puf jauʧ gəuna bigtim bi fuf."
 	},
 	{
 		"english": "The sun shines brightly.",
@@ -113,7 +113,7 @@
 	},
 	{
 		"english": "I will be happy to go.",
-		"ipa": "mi blib gona jit."
+		"ipa": "mi blib gəuna jit."
 	},
 	{
 		"english": "He will arrive soon.",
@@ -153,7 +153,7 @@
 	},
 	{
 		"english": "Henry's dog is lost.",
-		"ipa": ""
+		"ipa": "'Henry' fluf bi luf."
 	},
 	{
 		"english": "My cat is black.",
@@ -165,7 +165,7 @@
 	},
 	{
 		"english": "I usually sleep soundly.",
-		"ipa": ""
+		"ipa": "mi tinibigtim blib mirmir."
 	},
 	{
 		"english": "The children ran after Jack.",
