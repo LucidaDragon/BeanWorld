@@ -69,6 +69,16 @@
 			"type": "verb"
 		}
 	],
+	"bigda": [
+		{
+			"definition": "Many or multiple things.",
+			"type": "noun"
+		},
+		{
+			"definition": "Many or multiple of a thing.",
+			"type": "adjective"
+		}
+	],
 	"blu": [
 		{
 			"definition": "Blue, including blue shades of cyan, purple, and gray.",
