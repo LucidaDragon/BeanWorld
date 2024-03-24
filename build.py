@@ -16,6 +16,7 @@ EXAMPLES_SOURCE = f"{SOURCE_DIRECTORY}/examples.json"
 
 OUTPUT_DIRECTORY = "./output"
 
+INCLUDE = ["style.css", "editor.html", "orthography.json", "dictionary.json"]
 PHONETICS_PAGE = f"{OUTPUT_DIRECTORY}/phonetics.html"
 DICTIONARY_DIRECTORY = f"{OUTPUT_DIRECTORY}/dictionary"
 EXAMPLES_PAGE = f"{OUTPUT_DIRECTORY}/examples.html"
@@ -233,16 +234,12 @@ def build_examples() -> dict[str, list[dict[str, str]]]:
 	
 	return result
 
-def build_files(filter: list[str]) -> None:
+def build_files() -> None:
 	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
 	
-	for _, _, files in os.walk(SOURCE_DIRECTORY):
-		for file in files:
-			if any([file.endswith(f".{suffix}") for suffix in filter]):
-				shutil.copyfile(f"{SOURCE_DIRECTORY}/{file}", f"{OUTPUT_DIRECTORY}/{file}")
-		break
+	for file in INCLUDE: shutil.copyfile(f"{SOURCE_DIRECTORY}/{file}", f"{OUTPUT_DIRECTORY}/{file}")
 
 build_phonetics()
 build_markdown()
 build_dictionary(build_examples())
-build_files(["html", "css", "js", "png"])
+build_files()

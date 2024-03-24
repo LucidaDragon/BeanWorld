@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			addEventListener("load", async function()
+			{
+				const outarea = document.getElementById("outarea");
+				const outbox = document.getElementById("outbox");
+				const keyboard = document.getElementById("keyboard");
+				const suggestions = document.getElementById("suggestions");
+				const entry = document.getElementById("entry");
+				
+				const orthography = await (await fetch("orthography.json")).json();
+				const dictionary = await (await fetch("dictionary.json")).json();
+				
+				function ipa_to_orthography(word)
+				{
+					let result = "";
+					
+					for (let i = 0; i < word.length; i++)
+					{
+						if (orthography[word[i]] === undefined) result += "?";
+						else result += orthography[word[i]];
+					}
+					
+					return result;
+				}
+				
+				Object.keys(dictionary).forEach(function(key)
+				{
+					const button = document.createElement("button");
+					button.textContent = ipa_to_orthography(key) + " - " + dictionary[key].map((definition) => "(" + definition.type + ") " + definition.definition).join(" / ");
+					button.addEventListener("click", function()
+					{
+						if (!outbox.textContent.endsWith(" ")) outbox.textContent += " ";
+						outbox.textContent += ipa_to_orthography(key);
+						entry.value = "";
+						entry.focus();
+						entry.dispatchEvent(new Event("input"));
+					});
+					suggestions.appendChild(button);
+				});
+				
+				entry.addEventListener("input", function()
+				{
+					outarea.style.display = entry.value !== "" ? "none" : "";
+					suggestions.style.display = entry.value === "" ? "none" : "";
+					
+					for (let i = 0; i < suggestions.children.length; i++)
+					{
+						const child = suggestions.children[i];
+						child.style.display = child.textContent.toLowerCase().includes(entry.value.toLowerCase()) ? "" : "none";
+					}
+				});
+				
+				[...Object.values(orthography), "(space)", ",", ".", "?", "!", "(back)"].forEach(function(character)
+				{
+					const button = document.createElement("button");
+					button.textContent = character;
+					button.addEventListener("click", function()
+					{
+						if (character === "(space)") outbox.textContent += " ";
+						else if (character === "(back)")
+						{
+							if (outbox.textContent.length > 0) outbox.textContent = outbox.textContent.slice(0, outbox.textContent.length - 1);
+						}
+						else outbox.textContent += character;
+					});
+					
+					keyboard.appendChild(button);
+				});
+			});
+		</script>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			html, body
+			{
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			body
+			{
+				display: grid;
+				grid-template-columns: auto;
+				grid-template-rows: auto max-content;
+			}
+			
+			#outarea
+			{
+				grid-row: 1;
+				display: grid;
+				grid-template-columns: auto;
+				grid-template-rows: auto max-content;
+			}
+			
+			#outbox
+			{
+				grid-row: 1;
+			}
+			
+			#keyboard
+			{
+				grid-row: 2;
+			}
+			
+			#suggestions
+			{
+				grid-row: 1;
+				overflow-y: scroll;
+				display: grid;
+				grid-template-columns: auto;
+			}
+			
+			#suggestions > button
+			{
+				width: 100%;
+			}
+			
+			#entry
+			{
+				grid-row: 2;
+			}
+			
+			@media (prefers-color-scheme: light)
+			{
+				#outbox
+				{
+					background-color: #EEEEEE;
+				}
+				
+				#entry
+				{
+					color: black;
+					background-color: #EEEEEE;
+					border-color: #EEEEEE;
+				}
+				
+				button
+				{
+					color: black;
+					background-color: #DDDDDD;
+					border-color: #DDDDDD;
+				}
+				
+				button:hover
+				{
+					background-color: #EEEEEE;
+					border-color: #DDDDDD;
+				}
+			}
+
+			@media (prefers-color-scheme: dark)
+			{
+				#outbox
+				{
+					background-color: #111111;
+				}
+				
+				#entry
+				{
+					color: white;
+					background: #111111;
+					border-color: #111111;
+				}
+				
+				button
+				{
+					color: white;
+					background-color: #222222;
+					border-color: #222222;
+				}
+				
+				button:hover
+				{
+					background-color: #333333;
+					border-color: #222222;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outarea">
+			<div id="outbox" contenteditable="true" tabindex="2"></div>
+			<div id="keyboard"></div>
+		</div>
+		<div id="suggestions" style="display: none;"></div>
+		<input id="entry" type="text" placeholder="Search" tabindex="1">
+	</body>
+</html>
