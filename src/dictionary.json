@@ -2,149 +2,177 @@
 	"abu": [
 		{
 			"definition": "Close or near.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["close", "near"]
 		}
 	],
 	"bi": [
 		{
 			"definition": "To do or be.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["be", "is"]
 		}
 	],
 	"big": [
 		{
 			"definition": "A larger, older, or greater thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["giant", "huge", "big", "bigger", "large", "larger", "old", "older", "great", "greater"]
 		}
 	],
 	"bigpik": [
 		{
 			"definition": "White or bright.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["white", "bright", "light"]
 		}
 	],
 	"bigtim": [
 		{
 			"definition": "Always, constantly, or not for a while.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["always", "constantly", "later"]
 		}
 	],
 	"bigtinitim": [
 		{
 			"definition": "Rarely, seldomly.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["rare", "rarely", "seldom", "seldomly"]
 		}
 	],
 	"bin": [
 		{
 			"definition": "An individual.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["person", "people", "individual", "individuals", "man", "men", "woman", "women"]
 		}
 	],
 	"blab": [
 		{
 			"definition": "An action which involves speaking.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["speaking", "talking", "saying", "shouting", "calling", "yelling"]
 		},
 		{
 			"definition": "Speech or language.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["language", "languages", "word", "words", "phrase", "phrases"]
 		},
 		{
 			"definition": "To speak.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["speak", "talk", "say", "shout", "call", "yell"]
 		}
 	],
 	"bib": [
 		{
-			"definition": "An enjoyable thing.",
-			"type": "adjective"
+			"definition": "An enjoyable thing or a thing that enjoys.",
+			"type": "adjective",
+			"translations": ["happy", "excited", "enjoyable"]
 		},
 		{
 			"definition": "An enjoyable action.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["enjoyable", "excitedly"]
 		},
 		{
 			"definition": "To enjoy.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["enjoy", "like"]
 		}
 	],
 	"bigda": [
 		{
 			"definition": "Many or multiple things.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["many", "all"]
 		},
 		{
 			"definition": "Many or multiple of a thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["many", "multiple", "all"]
 		}
 	],
 	"blu": [
 		{
 			"definition": "Blue, including blue shades of cyan, purple, and gray.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["blue", "cyan", "purple", "gray", "grey"]
 		}
 	],
 	"blub": [
 		{
-			"definition": "An unenjoyable thing.",
-			"type": "adjective"
+			"definition": "An unenjoyable thing or a thing that does not enjoy.",
+			"type": "adjective",
+			"translations": ["sad", "unhappy", "unenjoyable"]
 		},
 		{
 			"definition": "An unenjoyable action.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["unhappily", "unenjoyable"]
 		},
 		{
 			"definition": "To suffer.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["suffer", "suffers", "sulk", "sulks", "brood", "broods", "mourn", "mourns"]
 		}
 	],
 	"blufru": [
 		{
 			"definition": "Magenta, including magenta shades of purple and red.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["magenta", "purple", "violet", "pink", "red"]
 		}
 	],
 	"bork": [
 		{
 			"definition": "To growl or roar.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["growl", "growls", "roar", "roars", "shout", "shouts", "scream", "screams", "cry", "cries"]
 		},
 		{
 			"definition": "The sound of a growl or roar.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["growl", "growls", "roar", "roars", "shout", "shouts", "scream", "screams", "cry", "cries"]
 		}
 	],
 	"brɛd": [
 		{
 			"definition": "An edible thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["edible", "tasty", "delicious", "yummy"]
 		},
 		{
 			"definition": "Food or sustinance.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["food", "sustinance", "breakfast", "lunch", "dinner", "snack"]
 		},
 		{
 			"definition": "To consume or digest.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["eat", "consume", "digest", "snack", "devour"]
 		}
 	],
 	"bubl": [
 		{
 			"definition": "Water or liquid.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["water", "liquid"]
 		}
 	],
 	"bonk": [
 		{
 			"definition": "To attack.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["attack", "hit", "slap", "bonk"]
 		}
 	],
 	"bup": [
 		{
 			"definition": "To touch.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["touch"]
 		}
 	],
 	"bupfrut": [
@@ -156,451 +184,553 @@
 	"bupsnut": [
 		{
 			"definition": "A nose.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["nose"]
 		}
 	],
 	"bɛnzəu": [
 		{
 			"definition": "Sap or sticky fluid.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["sap", "goop"]
 		}
 	],
 	"da": [
 		{
 			"definition": "A single or the only thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["the", "one", "a"]
 		},
 		{
 			"definition": "A thing.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["thing"]
 		}
 	],
 	"dəm": [
 		{
 			"definition": "An unintelligent thing. Extremely disrespectful when applied to an individual.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["stupid", "idiot", "idiotic", "dumb"]
 		},
 		{
 			"definition": "An unintelligent or short-sighted action.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["stupid", "idiot", "idiotic", "dumb"]
 		}
 	],
 	"dɪ": [
 		{
 			"definition": "An action that occured in the past.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["did", "was"]
 		}
 	],
 	"dɪg": [
 		{
 			"definition": "A place of shelter or object which shelters.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["shelter", "house", "roof", "home"]
 		},
 		{
 			"definition": "To shelter.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["shelter", "shelters", "cover", "covers", "hide", "hides", "protect", "protects"]
 		}
 	],
 	"dɪɲk": [
 		{
 			"definition": "Hard or unyielding.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["hard", "stiff", "unyielding"]
 		},
 		{
 			"definition": "Rock or ground.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
 		}
 	],
 	"fin": [
 		{
 			"definition": "To stop, finish, or end.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["stop", "stops", "halt", "halts", "cease", "ceases", "finish", "finishes", "end", "ends"]
 		},
 		{
 			"definition": "End or final stage.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["end"]
 		}
 	],
 	"flu": [
 		{
 			"definition": "A flying thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["flyer", "bird"]
 		},
 		{
 			"definition": "To fly.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["fly", "soar", "float", "sail"]
 		}
 	],
 	"fluf": [
 		{
 			"definition": "Furred or feathered.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["furry", "furred", "fuzzy", "feathered"]
 		},
 		{
 			"definition": "Fur or feathers.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["fur", "furs", "fuzz", "hair", "hairs", "feather", "feathers"]
 		}
 	],
 	"flup": [
 		{
 			"definition": "To lay down, especially on one's belly.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["lay", "lie", "flop"]
 		}
 	],
 	"forgor": [
 		{
 			"definition": "To forget.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["forget", "forgets", "misremember", "misremembers"]
 		}
 	],
 	"fru": [
 		{
 			"definition": "Red, including red shades of magenta and orange.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["red", "orange", "cherry", "pink"]
 		}
 	],
 	"frut": [
 		{
 			"definition": "An edible and colorful plant.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["fruit", "fruits", "berry", "berries", "treat", "treats"]
 		}
 	],
 	"fuf": [
 		{
 			"definition": "Warm or hot.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["warm", "hot"]
+		},
+		{
+			"definition": "To glow or shine.",
+			"type": "verb",
+			"translations": ["glow", "glows", "shine", "shines"]
 		},
 		{
 			"definition": "Warm light or glow.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["glow", "shine"]
 		}
 	],
 	"ful": [
 		{
 			"definition": "To play or frolic.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["play", "plays", "frolic", "frolics"]
 		},
 		{
 			"definition": "Game-like or jokingly.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["playful", "playfully", "joking", "jokingly"]
 		}
 	],
 	"gɪb": [
 		{
 			"definition": "To give.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["give", "present"]
 		}
 	],
 	"gəuna": [
 		{
 			"definition": "An action that will occur in the future.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["will"]
 		}
 	],
 	"gubər": [
 		{
 			"definition": "A silly creature.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["silly"]
+		},
+		{
+			"definition": "A silly creature.",
+			"type": "adjective",
+			"translations": ["silly", "funny"]
 		}
 	],
 	"gugər": [
 		{
 			"definition": "A feral creature.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["animal", "creature"]
+		},
+		{
+			"definition": "A feral creature.",
+			"type": "adjective",
+			"translations": ["wild", "hostile"]
 		}
 	],
 	"iʧi": [
 		{
 			"definition": "A thing that requires scratching.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["itchy", "itches", "scratchy", "scratches"]
 		}
 	],
 	"ipi": [
 		{
 			"definition": "To pass out or become unconscious.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["sleep", "pass out", "die", "perish"]
 		},
 		{
 			"definition": "An extremely tired thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["sleepy", "dying"]
 		}
 	],
 	"ja": [
 		{
 			"definition": "The person or people being spoken or narrated to.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["you"]
 		}
 	],
 	"jauʧ": [
 		{
 			"definition": "Fire or pain.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["fire", "fires", "pain", "pains"]
 		}
 	],
 	"jit": [
 		{
 			"definition": "A going or throwing thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["going", "throwing", "traveling"]
 		},
 		{
 			"definition": "To go or throw.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["go", "goes", "throw", "throws", "travel", "travels"]
 		}
 	],
 	"kik": [
 		{
 			"definition": "To laugh or giggle.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["laugh", "laughs", "giggle", "giggles"]
 		},
 		{
 			"definition": "Laughter or giggling.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["laughter", "laugh", "giggle", "giggling"]
 		}
 	],
 	"lif": [
 		{
 			"definition": "A plant or a piece of plant.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["plant", "leaf", "branch", "stick"]
 		}
 	],
 	"lifi": [
 		{
 			"definition": "Green, including green shades of yellow and cyan.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["green", "lime", "turquois"]
 		}
 	],
 	"luf": [
 		{
 			"definition": "To get lost or disoriented.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["lose", "loses", "disorient", "disorients"]
 		},
 		{
 			"definition": "A lost or disoriented thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["lost", "disoriented"]
 		}
 	],
 	"mi": [
 		{
 			"definition": "The speaker or narrator of the phrase.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["me", "i", "myself"]
 		}
 	],
 	"mirmir": [
 		{
 			"definition": "A tired thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["sleepy", "tired"]
 		},
 		{
 			"definition": "To sleep.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["sleep", "sleeps"]
 		}
 	],
 	"nu": [
 		{
 			"definition": "Negation of the following.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["not"]
 		},
 		{
 			"definition": "Negation of the following.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["not"]
 		}
 	],
 	"nudfru": [
 		{
 			"definition": "Yellow, including shades of orange and lime.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["yellow", "orange", "lime"]
 		}
 	],
 	"nudl": [
 		{
 			"definition": "Long or stretchy.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["long", "stretchy"]
 		}
 	],
 	"nutim": [
 		{
 			"definition": "Never.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["never"]
 		}
 	],
 	"nɪp": [
 		{
 			"definition": "Cool or cold.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["cold", "cool"]
 		}
 	],
 	"pik": [
 		{
 			"definition": "To see or look.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["see", "sees", "observe", "observes", "look", "looks"]
 		}
 	],
 	"pip": [
 		{
 			"definition": "Eye or eyes.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["eye", "eyes"]
 		}
 	],
 	"pɪt": [
 		{
 			"definition": "Hole or tunnel.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["hole", "holes", "tunnel", "tunnels"]
 		}
 	],
 	"puf": [
 		{
 			"definition": "Air or sky.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["air", "sky", "skies", "wind", "winds"]
 		}
 	],
 	"sɛt": [
 		{
 			"definition": "To begin or start.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["begin", "begins", "start", "starts"]
 		},
 		{
 			"definition": "Beginning or first stage.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["start", "beginning"]
 		}
 	],
 	"sɪt": [
 		{
 			"definition": "To remain in place.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["sit", "sits", "wait", "waits", "remain", "remains"]
 		},
 		{
 			"definition": "An object that holds or supports a thing.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["seat", "chair", "table", "bench", "pillow", "pillar"]
 		}
 	],
 	"skiɲgi": [
 		{
 			"definition": "Smelly or stinky.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["smelly", "stinky"]
 		}
 	],
 	"skiɲgɪs": [
 		{
 			"definition": "Disgusting or yucky.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["yucky", "disgusting"]
 		}
 	],
 	"slərp": [
 		{
 			"definition": "Drink or beverage.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["drink", "drinks", "beverage", "beverages"]
 		},
 		{
 			"definition": "To drink.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["drink", "drinks", "slurp", "slurps"]
 		}
 	],
 	"snugl": [
 		{
 			"definition": "A thing that loves.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["loves"]
 		},
 		{
 			"definition": "A loving action.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["lovingly"]
 		},
 		{
 			"definition": "To embrace lovingly.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["embrace", "embraces", "snuggle", "snuggles"]
 		}
 	],
 	"snut": [
 		{
 			"definition": "Face, mouth, or nose.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["face", "faces", "mouth", "mouths", "nose", "noses", "snout", "snouts"]
 		}
 	],
 	"spin": [
 		{
 			"definition": "To shake or dance.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["dance", "dances", "shake", "shakes", "spin", "spins"]
 		}
 	],
 	"spuki": [
 		{
 			"definition": "A scary or unnerving thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["scary", "concerning", "unnerving", "creepy"]
 		}
 	],
 	"tap": [
 		{
 			"definition": "To select or mark.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["select", "selects", "mark", "marks"]
 		}
 	],
 	"taptim": [
 		{
 			"definition": "Sometimes.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["sometimes"]
 		}
 	],
 	"tɪɲk": [
 		{
 			"definition": "To think or ponder.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["think", "thinks", "ponder", "ponders"]
 		}
 	],
 	"tim": [
 		{
 			"definition": "Time or duration.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["time", "times", "duration", "durations"]
 		}
 	],
 	"tini": [
 		{
 			"definition": "A smaller, younger, or lesser thing.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["tiny", "small", "smaller", "young", "younger", "less", "lesser"]
 		}
 	],
 	"tinibigtim": [
 		{
 			"definition": "Often or frequently.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["often", "frequently"]
 		}
 	],
 	"tinipik": [
 		{
 			"definition": "Black or dark.",
-			"type": "adjective"
+			"type": "adjective",
+			"translations": ["black", "dark"]
 		}
 	],
 	"tinitim": [
 		{
 			"definition": "Soon or shortly.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["soon", "shortly"]
 		}
 	],
 	"tu": [
 		{
 			"definition": "To come.",
-			"type": "verb"
+			"type": "verb",
+			"translations": ["come", "comes"]
 		},
 		{
 			"definition": "An action occurring toward.",
-			"type": "adverb"
+			"type": "adverb",
+			"translations": ["coming", "toward", "towards"]
 		}
 	],
 	"zum": [
 		{
+			"definition": "Quickly or rapidly.",
+			"type": "adverb",
+			"translations": ["quickly", "rapidly"]
+		},
+		{
 			"definition": "Fast, quick, or high velocity.",
-			"type": "adverb"
+			"type": "adjective",
+			"translations": ["fast", "quick", "rapid"]
 		}
 	],
 	"ʧi": [
 		{
 			"definition": "All individuals involved or previously mentioned.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["everyone", "them", "all"]
 		}
 	],
 	"ʧu": [
 		{
 			"definition": "The individual involved or previously mentioned.",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["them"]
 		}
 	]
 }

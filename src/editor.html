@@ -26,31 +26,45 @@
 					return result;
 				}
 				
-				Object.keys(dictionary).forEach(function(key)
-				{
-					const button = document.createElement("button");
-					button.textContent = ipa_to_orthography(key) + " - " + dictionary[key].map((definition) => "(" + definition.type + ") " + definition.definition).join(" / ");
-					button.addEventListener("click", function()
-					{
-						if (!outbox.textContent.endsWith(" ")) outbox.textContent += " ";
-						outbox.textContent += ipa_to_orthography(key);
-						entry.value = "";
-						entry.focus();
-						entry.dispatchEvent(new Event("input"));
-					});
-					suggestions.appendChild(button);
-				});
-				
 				entry.addEventListener("input", function()
 				{
 					outarea.style.display = entry.value !== "" ? "none" : "";
 					suggestions.style.display = entry.value === "" ? "none" : "";
 					
-					for (let i = 0; i < suggestions.children.length; i++)
+					if (entry.value === "") return;
+					
+					const values = entry.value.split(" ").filter(function(str) { return str !== ""; });
+					
+					suggestions.innerText = "";
+					Object.keys(dictionary).forEach(function(key)
 					{
-						const child = suggestions.children[i];
-						child.style.display = child.textContent.toLowerCase().includes(entry.value.toLowerCase()) ? "" : "none";
-					}
+						if (!dictionary[key].some(function(definition)
+						{
+							if (definition.translations === undefined) return values.some(function(value)
+							{
+								return definition.definition.toLowerCase().includes(value.toLowerCase());
+							});
+							else return definition.translations.some(function(translation)
+							{
+								return values.some(function(value)
+								{
+									return translation.toLowerCase().includes(value.toLowerCase());
+								});
+							});
+						})) return;
+						
+						const button = document.createElement("button");
+						button.textContent = ipa_to_orthography(key) + " - " + dictionary[key].map((definition) => "(" + definition.type + ") " + definition.definition).join(" / ");
+						button.addEventListener("click", function()
+						{
+							if (!outbox.textContent.endsWith(" ")) outbox.textContent += " ";
+							outbox.textContent += ipa_to_orthography(key);
+							entry.value = "";
+							entry.focus();
+							entry.dispatchEvent(new Event("input"));
+						});
+						suggestions.appendChild(button);
+					});
 				});
 				
 				[...Object.values(orthography), "(space)", ",", ".", "?", "!", "(back)"].forEach(function(character)
