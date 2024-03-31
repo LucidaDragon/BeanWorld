@@ -26,6 +26,7 @@ Beans believe that all objects and concepts have an associated spirit. These spi
 While all beans may attempt to commune with spirits to please them, only village elders are permitted to contact the most powerful of them. This is to prevent any powerful spirits from accidentally being upset, as the elders have the most experience out of the entire tribe.
 
 ## Medicine
+Bean medicine is very primitive and largely revolves around the consumption or application of various fruits and plants, depending on the ailment. Physical wounds are often covered with clay to stop bleeding and prevent infection.
 
 ## Dress
 Beans will often wear crowns of flowers to enhance or contrast their natural coloring. Some types of crowns are reserved for special occassions, such as the bright white flower crown or the cyan flower crown.
