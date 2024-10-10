@@ -3,27 +3,6 @@ from typing import cast
 
 os.chdir(__file__[:__file__.replace("\\", "/").rindex("/")])
 
-# SITE_NAME = "BeanWiki"
-# DESCRIPTION_LENGTH = 200
-
-# SOURCE_DIRECTORY = "./src"
-
-# PHONETICS_SOURCE = f"{SOURCE_DIRECTORY}/phonetics-template.xml"
-# DICTIONARY_SOURCE = f"{SOURCE_DIRECTORY}/dictionary.json"
-# ORTHOGRAPHY_SOURCE = f"{SOURCE_DIRECTORY}/orthography.json"
-# LATINIZATION_SOURCE = f"{SOURCE_DIRECTORY}/latinization.json"
-# EXAMPLES_SOURCE = f"{SOURCE_DIRECTORY}/examples.json"
-# ENGLISH_SOURCE = f"{SOURCE_DIRECTORY}/simplified-english.txt"
-
-# OUTPUT_DIRECTORY = "./output"
-
-# INCLUDE = ["style.css", "editor.html", "orthography.json", "dictionary.json"]
-# PHONETICS_PAGE = f"{OUTPUT_DIRECTORY}/phonetics.html"
-# DICTIONARY_DIRECTORY = f"{OUTPUT_DIRECTORY}/dictionary"
-# EXAMPLES_PAGE = f"{OUTPUT_DIRECTORY}/examples.html"
-
-# WORD_REGEX = re.compile(r"[^\0-\46\50-\100\133-\140\173-\177]+")
-
 class Meaning:
 	def __init__(self, definition: str | None = None, type: str | None = None, translations: list[str] | None = None, **kwargs) -> None:
 		self.definition = definition
