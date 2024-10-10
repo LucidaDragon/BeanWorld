@@ -3,7 +3,7 @@
 		{
 			"definition": "Close or near.",
 			"type": "adverb",
-			"translations": ["close", "near", "nearby", "adjacent", "neighboring", "bordering", "around", "beside"]
+			"translations": ["close", "near", "nearby", "adjacent", "neighboring", "bordering", "around", "beside", "at"]
 		}
 	],
 	"bi": [
@@ -438,12 +438,12 @@
 		{
 			"definition": "A going or throwing thing.",
 			"type": "adjective",
-			"translations": ["going", "throwing", "traveling"]
+			"translations": ["going", "throwing", "traveling", "running"]
 		},
 		{
 			"definition": "To go or throw.",
 			"type": "verb",
-			"translations": ["go", "goes", "throw", "throws", "travel", "travels"]
+			"translations": ["go", "goes", "throw", "throws", "travel", "travels", "run", "runs"]
 		}
 	],
 	"kik": [
