@@ -14,6 +14,7 @@ DICTIONARY_SOURCE = f"{SOURCE_DIRECTORY}/dictionary.json"
 ORTHOGRAPHY_SOURCE = f"{SOURCE_DIRECTORY}/orthography.json"
 LATINIZATION_SOURCE = f"{SOURCE_DIRECTORY}/latinization.json"
 EXAMPLES_SOURCE = f"{SOURCE_DIRECTORY}/examples.json"
+ENGLISH_SOURCE = f"{SOURCE_DIRECTORY}/simplified-english.txt"
 
 OUTPUT_DIRECTORY = "./output"
 
@@ -229,7 +230,20 @@ def build_dictionary(examples: dict[str, list[dict[str, str]]], orthography: dic
 		
 		stream.write("</body></html>")
 	
-	print(f"Coverage: {len(english_coverage)} english words with {len(DICTIONARY)} bean words ({bean_variations} variations).")
+	remaining_english: list[str] = []
+	with open(ENGLISH_SOURCE, "r") as stream:
+		for line in stream.readlines():
+			english_word = line.strip().lower()
+			if english_word.startswith("#"): continue
+			
+			if english_word != "" and not (english_word in english_coverage):
+				remaining_english.append(english_word)
+	
+	print(f"Coverage: {len(english_coverage)} english words ({int((len(english_coverage) * 10000) / (len(remaining_english) + len(english_coverage))) / 100}%) with {len(DICTIONARY)} bean words ({bean_variations} variations).")
+	if len(remaining_english) > 0:
+		top_words: list[str] = []
+		for i in range(min(len(remaining_english), 10)): top_words.append(remaining_english[i])
+		print("Top 10 words to add:", ", ".join(top_words))
 
 def build_examples(orthography: dict[str, str]) -> dict[str, list[dict[str, str]]]:
 	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
