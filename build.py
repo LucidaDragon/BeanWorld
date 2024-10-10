@@ -187,7 +187,18 @@ def build_phonetics() -> None:
 def build_dictionary(examples: dict[str, list[dict[str, str]]], orthography: dict[str, str], latinization: dict[str, str]) -> None:
 	os.makedirs(DICTIONARY_DIRECTORY, exist_ok=True)
 	
+	english_coverage: set[str] = set()
+	bean_variations: int = 0
+	
 	for ipa in DICTIONARY:
+		for entry in DICTIONARY[ipa]:
+			if not "translations" in entry:
+				print(ipa + " is missing translations.")
+				continue
+			
+			for english in entry["translations"]: english_coverage.add(english.lower())
+			bean_variations += 1
+		
 		with open(f"{DICTIONARY_DIRECTORY}/{ipa}.html", "w", encoding="utf-8") as stream:
 			stream.write("<!DOCTYPE html><html>")
 			stream.write(get_html_header(ipa_to_orthography(ipa, orthography), SITE_NAME, f"/{ipa}/ Definition & Examples", css="../style.css"))
@@ -217,6 +228,8 @@ def build_dictionary(examples: dict[str, list[dict[str, str]]], orthography: dic
 			stream.write("<br>")
 		
 		stream.write("</body></html>")
+	
+	print(f"Coverage: {len(english_coverage)} english words with {len(DICTIONARY)} bean words ({bean_variations} variations).")
 
 def build_examples(orthography: dict[str, str]) -> dict[str, list[dict[str, str]]]:
 	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
