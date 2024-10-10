@@ -3,49 +3,49 @@
 		{
 			"definition": "Close or near.",
 			"type": "adverb",
-			"translations": ["close", "near"]
+			"translations": ["close", "near", "nearby", "adjacent", "neighboring", "bordering", "around", "beside"]
 		}
 	],
 	"bi": [
 		{
 			"definition": "To do or be.",
 			"type": "verb",
-			"translations": ["be", "is"]
+			"translations": ["do", "be", "is", "are"]
 		}
 	],
 	"big": [
 		{
 			"definition": "A larger, older, or greater thing.",
 			"type": "adjective",
-			"translations": ["giant", "huge", "big", "bigger", "large", "larger", "old", "older", "great", "greater"]
+			"translations": ["big", "bigger", "giant", "gigantic", "huge", "large", "larger", "colossal", "enormous", "fat", "immense", "massive", "vast", "old", "older", "aged", "ancient", "elderly", "mature", "senior", "great", "greater", "supreme"]
 		}
 	],
 	"bigpik": [
 		{
 			"definition": "White or bright.",
 			"type": "adjective",
-			"translations": ["white", "bright", "light"]
+			"translations": ["white", "pale", "bright", "light"]
 		}
 	],
 	"bigtim": [
 		{
 			"definition": "Always, constantly, or not for a while.",
 			"type": "adverb",
-			"translations": ["always", "constantly", "later"]
+			"translations": ["always", "eternally", "constantly", "later"]
 		}
 	],
 	"bigtinitim": [
 		{
 			"definition": "Rarely, seldomly.",
 			"type": "adverb",
-			"translations": ["rare", "rarely", "seldom", "seldomly"]
+			"translations": ["rarely", "rare", "seldom", "seldomly", "infrequently"]
 		}
 	],
 	"bin": [
 		{
 			"definition": "An individual.",
 			"type": "noun",
-			"translations": ["person", "people", "individual", "individuals", "man", "men", "woman", "women"]
+			"translations": ["person", "people", "individual", "individuals", "being", "somebody", "man", "men", "woman", "women", "spirit"]
 		}
 	],
 	"blab": [
@@ -62,7 +62,7 @@
 		{
 			"definition": "To speak.",
 			"type": "verb",
-			"translations": ["speak", "talk", "say", "shout", "call", "yell"]
+			"translations": ["speak", "talk", "say", "shout", "call", "yell", "chat", "convey", "declare", "mumble", "tell", "utter", "whisper"]
 		}
 	],
 	"bib": [
@@ -125,6 +125,13 @@
 			"translations": ["magenta", "purple", "violet", "pink", "red"]
 		}
 	],
+	"bonk": [
+		{
+			"definition": "To attack.",
+			"type": "verb",
+			"translations": ["attack", "hit", "slap", "bonk"]
+		}
+	],
 	"bork": [
 		{
 			"definition": "To growl or roar.",
@@ -161,13 +168,6 @@
 			"translations": ["water", "liquid"]
 		}
 	],
-	"bonk": [
-		{
-			"definition": "To attack.",
-			"type": "verb",
-			"translations": ["attack", "hit", "slap", "bonk"]
-		}
-	],
 	"bup": [
 		{
 			"definition": "To touch.",
@@ -178,7 +178,8 @@
 	"bupfrut": [
 		{
 			"definition": "A game with the objective of keeping a large fruit from being captured by the opposing team(s).",
-			"type": "noun"
+			"type": "noun",
+			"translations": ["touch-fruit", "capture the flag", "football"]
 		}
 	],
 	"bupsnut": [
@@ -386,6 +387,18 @@
 			"definition": "A feral creature.",
 			"type": "adjective",
 			"translations": ["wild", "hostile"]
+		}
+	],
+	"in": [
+		{
+			"definition": "Into or inward.",
+			"type": "adverb",
+			"translations": ["in", "into", "within", "inward"]
+		},
+		{
+			"definition": "A thing that is inside or internal.",
+			"type": "adjective",
+			"translations": ["inside", "internal", "within", "inward"]
 		}
 	],
 	"iʧi": [
@@ -753,7 +766,7 @@
 		{
 			"definition": "An action occurring toward.",
 			"type": "adverb",
-			"translations": ["coming", "toward", "towards"]
+			"translations": ["to", "coming", "toward", "towards"]
 		}
 	],
 	"zum": [
