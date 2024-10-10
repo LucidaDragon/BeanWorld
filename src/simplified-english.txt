@@ -1,6 +1,6 @@
 the
-of
-and
+#of - "of" is implied by noun-as-adjective
+#and - "and" is delivered as multiple statements
 to
 a
 in
