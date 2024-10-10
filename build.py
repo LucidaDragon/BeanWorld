@@ -200,7 +200,7 @@ class Build:
 	def get_html_header(page_title: str, group_title: str, description: str, type: str = "website", css: str = "style.css", **kwargs) -> str:
 		metadata = { "og:type": type, "og:title": page_title, "og:site_name": group_title, "og:description": description }
 		for key in kwargs: metadata[f"og:{key}"] = kwargs[key]
-		return f'<head><meta charset="UTF-8"><title>{Build.escape(page_title)} - {Build.escape(group_title)}</title><link rel="stylesheet" href="{Build.escape(css)}">' + "".join([f'<meta property="{Build.escape(key)}" content="{Build.escape(metadata[key])}">' for key in metadata]) + "</head>"
+		return f'<head><meta charset="UTF-8"><title>{Build.escape(page_title)} - {Build.escape(group_title)}</title><link rel="stylesheet" href="{Build.escape(css)}"><meta name="viewport" content="width=device-width, initial-scale=1.0">' + "".join([f'<meta property="{Build.escape(key)}" content="{Build.escape(metadata[key])}">' for key in metadata]) + "</head>"
 	
 	def markdown_to_html(self, md: str) -> str:
 		DEFAULT_MODE = "default"
