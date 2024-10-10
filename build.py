@@ -251,17 +251,26 @@ def build_examples(orthography: dict[str, str]) -> dict[str, list[dict[str, str]
 	with open(EXAMPLES_SOURCE, "r", encoding="utf-8") as stream:
 		examples: list[dict[str, str]] = json.load(stream)
 	
+	finished_examples = 0
+	total_examples = 0
+	
 	result: dict[str, list[dict[str, str]]] = {}
 	with open(EXAMPLES_PAGE, "w", encoding="utf-8") as stream:
 		stream.write("<!DOCTYPE html><html>")
 		stream.write(get_html_header("Example Statements", SITE_NAME, "Example translations to english and IPA."))
 		stream.write(f"<body><h1>Examples</h1><p>See the <a href=\"./dictionary/index.html\">dictionary</a> for a list of all words.</p><table>")
 		for example in examples:
+			total_examples += 1
+			if example["ipa"] == "": continue
+			
+			finished_examples += 1
 			for word in extract_words(example["ipa"]):
 				if word in result: result[word].append(example)
 				else: result[word] = [example]
 			stream.write(f"<tr><td>{escape(example['english'])}</td><td>{words_to_links(example['ipa'], orthography)}</td></tr>")
 		stream.write("</table></body></html>")
+	
+	print(f"Examples: {finished_examples}/{total_examples} completed")
 	
 	return result
 
