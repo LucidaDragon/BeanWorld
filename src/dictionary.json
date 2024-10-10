@@ -293,6 +293,13 @@
 			"translations": ["lay", "lie", "flop"]
 		}
 	],
+	"flupfuf": [
+		{
+			"definition": "A belly.",
+			"type": "noun",
+			"translations": ["belly", "tummy", "stomach"]
+		}
+	],
 	"forgor": [
 		{
 			"definition": "To forget.",
@@ -509,6 +516,20 @@
 			"translations": ["long", "stretchy"]
 		}
 	],
+	"nudlrind": [
+		{
+			"definition": "A tail.",
+			"type": "noun",
+			"translations": ["tail"]
+		}
+	],
+	"nugin": [
+		{
+			"definition": "A head.",
+			"type": "noun",
+			"translations": ["head"]
+		}
+	],
 	"nutim": [
 		{
 			"definition": "Never.",
@@ -521,6 +542,13 @@
 			"definition": "Cool or cold.",
 			"type": "adjective",
 			"translations": ["cold", "cool"]
+		}
+	],
+	"pab": [
+		{
+			"definition": "A foot or paw.",
+			"type": "noun",
+			"translations": ["foot", "feet", "paw", "paws"]
 		}
 	],
 	"pik": [
@@ -551,6 +579,20 @@
 			"translations": ["air", "sky", "skies", "wind", "winds"]
 		}
 	],
+	"rind": [
+		{
+			"definition": "A back.",
+			"type": "noun",
+			"translations": ["back", "hind", "rear", "behind"]
+		}
+	],
+	"rufl": [
+		{
+			"definition": "A head frill.",
+			"type": "noun",
+			"translations": ["frill", "frills"]
+		}
+	],
 	"sɛt": [
 		{
 			"definition": "To begin or start.",
@@ -573,6 +615,13 @@
 			"definition": "An object that holds or supports a thing.",
 			"type": "noun",
 			"translations": ["seat", "chair", "table", "bench", "pillow", "pillar"]
+		}
+	],
+	"sɪti": [
+		{
+			"definition": "A leg.",
+			"type": "noun",
+			"translations": ["leg", "legs"]
 		}
 	],
 	"skiɲgi": [
@@ -620,7 +669,7 @@
 	],
 	"snut": [
 		{
-			"definition": "Face, mouth, or nose.",
+			"definition": "A face, mouth, or rarely a nose.",
 			"type": "noun",
 			"translations": ["face", "faces", "mouth", "mouths", "nose", "noses", "snout", "snouts"]
 		}
