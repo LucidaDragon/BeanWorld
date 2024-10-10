@@ -13,11 +13,40 @@
 			"translations": ["do", "be", "is", "are"]
 		}
 	],
+	"bib": [
+		{
+			"definition": "An enjoyable thing or a thing that enjoys.",
+			"type": "adjective",
+			"translations": ["happy", "excited", "enjoyable"]
+		},
+		{
+			"definition": "An enjoyable action.",
+			"type": "adverb",
+			"translations": ["enjoyable", "excitedly"]
+		},
+		{
+			"definition": "To enjoy.",
+			"type": "verb",
+			"translations": ["enjoy", "like"]
+		}
+	],
 	"big": [
 		{
 			"definition": "A larger, older, or greater thing.",
 			"type": "adjective",
 			"translations": ["big", "bigger", "giant", "gigantic", "huge", "large", "larger", "colossal", "enormous", "fat", "immense", "massive", "vast", "old", "older", "aged", "ancient", "elderly", "mature", "senior", "great", "greater", "supreme"]
+		}
+	],
+	"bigda": [
+		{
+			"definition": "Many or multiple things.",
+			"type": "noun",
+			"translations": ["many", "all"]
+		},
+		{
+			"definition": "Many or multiple of a thing.",
+			"type": "adjective",
+			"translations": ["many", "multiple", "all"]
 		}
 	],
 	"bigpik": [
@@ -63,35 +92,6 @@
 			"definition": "To speak.",
 			"type": "verb",
 			"translations": ["speak", "talk", "say", "shout", "call", "yell", "chat", "convey", "declare", "mumble", "tell", "utter", "whisper"]
-		}
-	],
-	"bib": [
-		{
-			"definition": "An enjoyable thing or a thing that enjoys.",
-			"type": "adjective",
-			"translations": ["happy", "excited", "enjoyable"]
-		},
-		{
-			"definition": "An enjoyable action.",
-			"type": "adverb",
-			"translations": ["enjoyable", "excitedly"]
-		},
-		{
-			"definition": "To enjoy.",
-			"type": "verb",
-			"translations": ["enjoy", "like"]
-		}
-	],
-	"bigda": [
-		{
-			"definition": "Many or multiple things.",
-			"type": "noun",
-			"translations": ["many", "all"]
-		},
-		{
-			"definition": "Many or multiple of a thing.",
-			"type": "adjective",
-			"translations": ["many", "multiple", "all"]
 		}
 	],
 	"blu": [
