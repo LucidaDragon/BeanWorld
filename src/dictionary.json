@@ -13,23 +13,6 @@
 			"translations": ["do", "be", "is", "are"]
 		}
 	],
-	"bib": [
-		{
-			"definition": "An enjoyable thing or a thing that enjoys.",
-			"type": "adjective",
-			"translations": ["happy", "excited", "enjoyable"]
-		},
-		{
-			"definition": "An enjoyable action.",
-			"type": "adverb",
-			"translations": ["enjoyable", "excitedly"]
-		},
-		{
-			"definition": "To enjoy.",
-			"type": "verb",
-			"translations": ["enjoy", "like"]
-		}
-	],
 	"big": [
 		{
 			"definition": "A larger, older, or greater thing.",
@@ -387,6 +370,23 @@
 			"definition": "A feral creature.",
 			"type": "adjective",
 			"translations": ["wild", "hostile"]
+		}
+	],
+	"i": [
+		{
+			"definition": "An enjoyable thing or a thing that enjoys.",
+			"type": "adjective",
+			"translations": ["happy", "excited", "enjoyable"]
+		},
+		{
+			"definition": "An enjoyable action.",
+			"type": "adverb",
+			"translations": ["enjoyable", "excitedly"]
+		},
+		{
+			"definition": "To enjoy.",
+			"type": "verb",
+			"translations": ["enjoy", "like"]
 		}
 	],
 	"in": [
