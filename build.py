@@ -12,6 +12,7 @@ SOURCE_DIRECTORY = "./src"
 PHONETICS_SOURCE = f"{SOURCE_DIRECTORY}/phonetics-template.xml"
 DICTIONARY_SOURCE = f"{SOURCE_DIRECTORY}/dictionary.json"
 ORTHOGRAPHY_SOURCE = f"{SOURCE_DIRECTORY}/orthography.json"
+LATINIZATION_SOURCE = f"{SOURCE_DIRECTORY}/latinization.json"
 EXAMPLES_SOURCE = f"{SOURCE_DIRECTORY}/examples.json"
 
 OUTPUT_DIRECTORY = "./output"
@@ -31,7 +32,10 @@ with open(DICTIONARY_SOURCE, "r", encoding="utf-8") as stream:
 with open(ORTHOGRAPHY_SOURCE, "r", encoding="utf-8") as stream:
 	ORTHOGRAPHY: dict[str, str] = json.load(stream)
 
-def ipa_to_orthography(ipa: str) -> str:
+with open(LATINIZATION_SOURCE, "r", encoding="utf-8") as stream:
+	LATINIZATION: dict[str, str] = json.load(stream)
+
+def ipa_to_orthography(ipa: str, orthography: dict[str, str], join_with: str = "") -> str:
 	if ipa.startswith("'") and ipa.endswith("'"): return ipa[1:-1]
 	
 	result: list[str] = []
@@ -40,13 +44,13 @@ def ipa_to_orthography(ipa: str) -> str:
 			result.append(c)
 			continue
 		
-		if not c in ORTHOGRAPHY:
+		if not c in orthography:
 			print(f"Warning: {c} (in {ipa}) is not defined in the orthography.")
 			return ipa
 		
-		result.append(ORTHOGRAPHY[c])
+		result.append(orthography[c])
 	
-	return "".join(result)
+	return join_with.join(result)
 
 def escape(text: str) -> str:
 	return text.replace("&", "&amp;").replace("\"", "&quot;").replace("'", "&apos;").replace("<", "&lt;").replace(">", "&gt;")
@@ -60,15 +64,15 @@ def word_to_link(ipa: str, text: str, tooltip: str | None = None, relative_to: s
 def extract_words(ipas: str) -> list[str]:
 	return WORD_REGEX.findall(ipas)
 
-def words_to_links(ipas: str, relative_to: str = ".") -> str:
-	return WORD_REGEX.sub(lambda match: word_to_link(match[0], ipa_to_orthography(match[0]), tooltip=match[0], relative_to=relative_to), ipas)
+def words_to_links(ipas: str, orthography: dict[str, str], relative_to: str = ".") -> str:
+	return WORD_REGEX.sub(lambda match: word_to_link(match[0], ipa_to_orthography(match[0], orthography), tooltip=match[0], relative_to=relative_to), ipas)
 
 def get_html_header(page_title: str, group_title: str, description: str, type: str = "website", css: str = "style.css", **kwargs) -> str:
 	metadata = { "og:type": type, "og:title": page_title, "og:site_name": group_title, "og:description": description }
 	for key in kwargs: metadata[f"og:{key}"] = kwargs[key]
-	return f'<head><title>{escape(page_title)} - {escape(group_title)}</title><link rel="stylesheet" href="{escape(css)}">' + "".join([f'<meta property="{escape(key)}" content="{escape(metadata[key])}">' for key in metadata]) + "</head>"
+	return f'<head><meta charset="UTF-8"><title>{escape(page_title)} - {escape(group_title)}</title><link rel="stylesheet" href="{escape(css)}">' + "".join([f'<meta property="{escape(key)}" content="{escape(metadata[key])}">' for key in metadata]) + "</head>"
 
-def markdown_to_html(md: str) -> str:
+def markdown_to_html(md: str, orthography: dict[str, str]) -> str:
 	DEFAULT_MODE = "default"
 	TABLE_MODE = "table"
 	
@@ -109,7 +113,7 @@ def markdown_to_html(md: str) -> str:
 			elif "`" in line:
 				line = escape(line)
 				result.append("<p>" if is_tag() else "<br>")
-				result.append(re.sub(r"`([^`]*)`", lambda match: escape("\"") + words_to_links(match[1]) + escape("\""), line))
+				result.append(re.sub(r"`([^`]*)`", lambda match: escape("\"") + words_to_links(match[1], orthography) + escape("\""), line))
 				if is_tag(): result.append("")
 			else:
 				append_text(line)
@@ -125,13 +129,13 @@ def extract_html_description(html: str) -> str:
 		if len(result) >= DESCRIPTION_LENGTH: break
 	return result.strip()
 
-def build_markdown() -> None:
+def build_markdown(orthography: dict[str, str]) -> None:
 	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
 	for _, _, files in os.walk(SOURCE_DIRECTORY):
 		for file in files:
 			if file.endswith(".md"):
 				with open(f"{SOURCE_DIRECTORY}/{file}", "r", encoding="utf-8") as stream:
-					html = markdown_to_html(stream.read())
+					html = markdown_to_html(stream.read(), orthography)
 				
 				name = ".".join(file.split(".")[:-1])
 				with open(f"{OUTPUT_DIRECTORY}/{name}.html", "w", encoding="utf-8") as stream:
@@ -180,14 +184,14 @@ def build_phonetics() -> None:
 		stream.write(root.toxml(encoding="utf-8"))
 		stream.write("\n</html>".encode("utf-8"))
 
-def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
+def build_dictionary(examples: dict[str, list[dict[str, str]]], orthography: dict[str, str], latinization: dict[str, str]) -> None:
 	os.makedirs(DICTIONARY_DIRECTORY, exist_ok=True)
 	
 	for ipa in DICTIONARY:
 		with open(f"{DICTIONARY_DIRECTORY}/{ipa}.html", "w", encoding="utf-8") as stream:
 			stream.write("<!DOCTYPE html><html>")
-			stream.write(get_html_header(ipa_to_orthography(ipa), SITE_NAME, f"/{ipa}/ Definition & Examples", css="../style.css"))
-			stream.write(f"<body><h1>{escape(ipa_to_orthography(ipa))}</h1><p>/{escape(ipa)}/</p>")
+			stream.write(get_html_header(ipa_to_orthography(ipa, orthography), SITE_NAME, f"/{ipa}/ Definition & Examples", css="../style.css"))
+			stream.write(f'<body><h1>{escape(ipa_to_orthography(ipa, orthography))}</h1><p>/{escape(ipa)}/ "{escape(ipa_to_orthography(ipa, latinization))}"</p>')
 			
 			for entry in DICTIONARY[ipa]:
 				if not isinstance(entry["type"], str): raise ValueError(f"Expected string in type field but got {str(entry['type'])}.")
@@ -197,7 +201,7 @@ def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
 				stream.write("<h2>Examples</h2><table>")
 				
 				for example in examples[ipa]:
-					stream.write(f"<tr><td>{escape(example['english'])}</td><td>{words_to_links(example['ipa'], relative_to='..')}</td>")
+					stream.write(f"<tr><td>{escape(example['english'])}</td><td>{words_to_links(example['ipa'], orthography, relative_to='..')}</td>")
 				
 				stream.write("</table>")
 			
@@ -209,12 +213,12 @@ def build_dictionary(examples: dict[str, list[dict[str, str]]]) -> None:
 		stream.write("<body><h1>Dictionary</h1><p>See the <a href=\"../examples.html\">examples</a> for a list of examples.</p>")
 		
 		for ipa in DICTIONARY:
-			stream.write(words_to_links(ipa, ".."))
+			stream.write(words_to_links(ipa, orthography, ".."))
 			stream.write("<br>")
 		
 		stream.write("</body></html>")
 
-def build_examples() -> dict[str, list[dict[str, str]]]:
+def build_examples(orthography: dict[str, str]) -> dict[str, list[dict[str, str]]]:
 	os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
 	
 	with open(EXAMPLES_SOURCE, "r", encoding="utf-8") as stream:
@@ -229,7 +233,7 @@ def build_examples() -> dict[str, list[dict[str, str]]]:
 			for word in extract_words(example["ipa"]):
 				if word in result: result[word].append(example)
 				else: result[word] = [example]
-			stream.write(f"<tr><td>{escape(example['english'])}</td><td>{words_to_links(example['ipa'])}</td></tr>")
+			stream.write(f"<tr><td>{escape(example['english'])}</td><td>{words_to_links(example['ipa'], orthography)}</td></tr>")
 		stream.write("</table></body></html>")
 	
 	return result
@@ -240,6 +244,6 @@ def build_files() -> None:
 	for file in INCLUDE: shutil.copyfile(f"{SOURCE_DIRECTORY}/{file}", f"{OUTPUT_DIRECTORY}/{file}")
 
 build_phonetics()
-build_markdown()
-build_dictionary(build_examples())
+build_markdown(ORTHOGRAPHY)
+build_dictionary(build_examples(ORTHOGRAPHY), ORTHOGRAPHY, LATINIZATION)
 build_files()
