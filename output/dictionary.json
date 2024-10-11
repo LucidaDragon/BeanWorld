@@ -446,6 +446,13 @@
 			"translations": ["go", "goes", "throw", "throws", "travel", "travels", "run", "runs"]
 		}
 	],
+	"joɪɲk": [
+		{
+			"definition": "To take or grab.",
+			"type": "verb",
+			"translations": ["take", "collect", "grab", "pick", "snag", "swipe", "nab", "seize", "snatch"]
+		}
+	],
 	"kik": [
 		{
 			"definition": "To laugh or giggle.",
