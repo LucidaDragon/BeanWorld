@@ -234,6 +234,13 @@
 			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
 		}
 	],
+	"ɛg": [
+		{
+			"definition": "An egg or unborn child.",
+			"type": "noun",
+			"translations": ["egg", "fetus", "baby"]
+		}
+	],
 	"fin": [
 		{
 			"definition": "To stop, finish, or end.",
