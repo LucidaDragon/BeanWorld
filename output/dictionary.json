@@ -84,23 +84,6 @@
 			"translations": ["blue", "cyan", "purple", "gray", "grey"]
 		}
 	],
-	"blub": [
-		{
-			"definition": "An unenjoyable thing or a thing that does not enjoy.",
-			"type": "adjective",
-			"translations": ["sad", "unhappy", "unenjoyable"]
-		},
-		{
-			"definition": "An unenjoyable action.",
-			"type": "adverb",
-			"translations": ["unhappily", "unenjoyable"]
-		},
-		{
-			"definition": "To suffer.",
-			"type": "verb",
-			"translations": ["suffer", "suffers", "sulk", "sulks", "brood", "broods", "mourn", "mourns"]
-		}
-	],
 	"blufru": [
 		{
 			"definition": "Magenta, including magenta shades of purple and red.",
@@ -142,6 +125,23 @@
 			"definition": "To consume or digest.",
 			"type": "verb",
 			"translations": ["eat", "consume", "digest", "snack", "devour"]
+		}
+	],
+	"bu": [
+		{
+			"definition": "An unenjoyable thing or a thing that does not enjoy.",
+			"type": "adjective",
+			"translations": ["sad", "unhappy", "unenjoyable"]
+		},
+		{
+			"definition": "An unenjoyable action.",
+			"type": "adverb",
+			"translations": ["unhappily", "unenjoyable"]
+		},
+		{
+			"definition": "To suffer.",
+			"type": "verb",
+			"translations": ["suffer", "suffers", "sulk", "sulks", "brood", "broods", "mourn", "mourns"]
 		}
 	],
 	"bubl": [
@@ -201,6 +201,13 @@
 			"definition": "An unintelligent or short-sighted action.",
 			"type": "adverb",
 			"translations": ["stupid", "idiot", "idiotic", "dumb"]
+		}
+	],
+	"dindin": [
+		{
+			"definition": "Food eaten before sleeping.",
+			"type": "noun",
+			"translations": ["dinner", "supper", "dessert"]
 		}
 	],
 	"dɪ": [
