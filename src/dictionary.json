@@ -3,21 +3,21 @@
 		{
 			"definition": "Close or near.",
 			"type": "adverb",
-			"translations": ["close", "near", "nearby", "adjacent", "neighboring", "bordering", "around", "beside", "at"]
+			"translations": ["close", "near", "nearby", "adjacent", "neighboring", "bordering", "around", "beside", "at", "by", "on"]
 		}
 	],
 	"bi": [
 		{
 			"definition": "To do or be.",
 			"type": "verb",
-			"translations": ["do", "be", "is", "are"]
+			"translations": ["do", "be", "is", "are", "am"]
 		}
 	],
 	"big": [
 		{
 			"definition": "A larger, older, or greater thing.",
 			"type": "adjective",
-			"translations": ["big", "bigger", "giant", "gigantic", "huge", "large", "larger", "colossal", "enormous", "fat", "immense", "massive", "vast", "old", "older", "aged", "ancient", "elderly", "mature", "senior", "great", "greater", "supreme"]
+			"translations": ["big", "bigger", "giant", "gigantic", "huge", "large", "larger", "colossal", "enormous", "fat", "immense", "massive", "vast", "old", "older", "aged", "ancient", "elderly", "mature", "senior", "great", "greater", "supreme", "more"]
 		}
 	],
 	"bigda": [
@@ -29,7 +29,7 @@
 		{
 			"definition": "Many or multiple of a thing.",
 			"type": "adjective",
-			"translations": ["many", "multiple", "all"]
+			"translations": ["many", "multiple", "all", "more"]
 		}
 	],
 	"bigpik": [
@@ -183,7 +183,7 @@
 		{
 			"definition": "A single or the only thing.",
 			"type": "adjective",
-			"translations": ["the", "one", "a"]
+			"translations": ["the", "one", "a", "this", "that", "it"]
 		},
 		{
 			"definition": "A thing.",
@@ -439,6 +439,11 @@
 			"definition": "The person or people being spoken or narrated to.",
 			"type": "noun",
 			"translations": ["you"]
+		},
+		{
+			"definition": "A thing of the person or people being spoken or narrated to.",
+			"type": "adjective",
+			"translations": ["your"]
 		}
 	],
 	"jauʧ": [
@@ -569,6 +574,13 @@
 			"definition": "Never.",
 			"type": "adverb",
 			"translations": ["never"]
+		}
+	],
+	"nɪbl": [
+		{
+			"definition": "To bite, often gently.",
+			"type": "verb",
+			"translations": ["bite", "nibble", "nip"]
 		}
 	],
 	"nɪp": [
@@ -806,7 +818,7 @@
 		{
 			"definition": "All individuals involved or previously mentioned.",
 			"type": "noun",
-			"translations": ["everyone", "them", "all"]
+			"translations": ["we", "everyone", "them", "all"]
 		}
 	],
 	"ʧu": [
