@@ -37,11 +37,11 @@
 	},
 	{
 		"english": "The sun is rising now.",
-		"ipa": ""
+		"ipa": "da puf jauʧ jit tu puf."
 	},
 	{
 		"english": "All the people shouted.",
-		"ipa": ""
+		"ipa": "bigda bin dɪ big blab."
 	},
 	{
 		"english": "Some of the people shouted.",
@@ -49,7 +49,7 @@
 	},
 	{
 		"english": "Many of the people shouted twice.",
-		"ipa": ""
+		"ipa": "bigda bin dɪ big blab. bigda bin big blab."
 	},
 	{
 		"english": "Happy people often shout.",
@@ -69,35 +69,35 @@
 	},
 	{
 		"english": "It's raining.",
-		"ipa": ""
+		"ipa": "da puf bubl bi abu."
 	},
 	{
 		"english": "The rain came down.",
-		"ipa": ""
+		"ipa": "da puf bubl dɪ jit tu dɪɲk."
 	},
 	{
 		"english": "The kitten is playing in the rain.",
-		"ipa": ""
+		"ipa": "da tini fluf ful abu da puf bubl."
 	},
 	{
 		"english": "The rain has stopped.",
-		"ipa": ""
+		"ipa": "da puf bubl fin."
 	},
 	{
 		"english": "Soon the rain will stop.",
-		"ipa": ""
+		"ipa": "da puf bubl gəuna fin tinitim."
 	},
 	{
 		"english": "I hope the rain stops soon.",
-		"ipa": ""
+		"ipa": "da puf bubl gəuna fin tinitim? mi bi i."
 	},
 	{
 		"english": "Once wild animals lived here.",
-		"ipa": ""
+		"ipa": "gugər dɪ bi abu da."
 	},
 	{
 		"english": "Slowly she looked around.",
-		"ipa": ""
+		"ipa": "ʧu nu zum pik abu."
 	},
 	{
 		"english": "Go away!",
@@ -117,7 +117,7 @@
 	},
 	{
 		"english": "He will arrive soon.",
-		"ipa": ""
+		"ipa": "ʧu gəuna fin jit tinitim."
 	},
 	{
 		"english": "The baby's ball has rolled away.",
@@ -137,11 +137,11 @@
 	},
 	{
 		"english": "We should eat more slowly.",
-		"ipa": ""
+		"ipa": "ʧi nu zum big brɛd?"
 	},
 	{
 		"english": "You have come too soon.",
-		"ipa": ""
+		"ipa": "ja dɪ tu big tinitim."
 	},
 	{
 		"english": "You must write more neatly.",
@@ -169,7 +169,7 @@
 	},
 	{
 		"english": "The children ran after Jack.",
-		"ipa": ""
+		"ipa": "tini bin dɪ jit tu 'Jack'."
 	},
 	{
 		"english": "I can play after school.",
@@ -181,19 +181,19 @@
 	},
 	{
 		"english": "We arrived at the river.",
-		"ipa": ""
+		"ipa": "ʧi dɪ jit tu da bubl."
 	},
 	{
 		"english": "I have been waiting for you.",
-		"ipa": ""
+		"ipa": "mi dɪ sɪt. mi gɪb ja mi tim."
 	},
 	{
 		"english": "The campers sat around the fire.",
-		"ipa": ""
+		"ipa": "ʧu dɪ sɪt abu da jauʧ."
 	},
 	{
 		"english": "A little girl with a kitten sat near me.",
-		"ipa": ""
+		"ipa": "tini bin dɪ snugl fluf. tini bin dɪ sɪt abu mi."
 	},
 	{
 		"english": "The child waited at the door for her father.",
@@ -213,7 +213,7 @@
 	},
 	{
 		"english": "Did the man leave?",
-		"ipa": ""
+		"ipa": "da bin dɪ jit?"
 	},
 	{
 		"english": "Is your sister coming for you?",
@@ -221,7 +221,7 @@
 	},
 	{
 		"english": "Can you come tomorrow?",
-		"ipa": ""
+		"ipa": "ja gəuna bigtim tu?"
 	},
 	{
 		"english": "Have the neighbors gone away for the winter?",
@@ -229,15 +229,15 @@
 	},
 	{
 		"english": "Does the robin sing in the rain?",
-		"ipa": ""
+		"ipa": "da flu bi blab abu da puf bubl?"
 	},
 	{
 		"english": "Are you going with us to the concert?",
-		"ipa": ""
+		"ipa": "ʧi gəuna bi abu da spin. ja gəuna jit abu ʧi?"
 	},
 	{
 		"english": "Have you ever travelled in the jungle?",
-		"ipa": ""
+		"ipa": "ja dɪ jit abu da bigda lif?"
 	},
 	{
 		"english": "We sailed down the river for several miles.",
@@ -253,7 +253,7 @@
 	},
 	{
 		"english": "Tom laughed at the monkey's tricks.",
-		"ipa": "'Tom' tu kik da spin gubər."
+		"ipa": "'Tom' kik tu da fluf gubər spin."
 	},
 	{
 		"english": "An old man with a walking stick stood beside the fence.",
@@ -269,7 +269,7 @@
 	},
 	{
 		"english": "Many little girls with wreaths of flowers on their heads danced around the bonfire.",
-		"ipa": "lif sɪt bigda tini bin. tini bin abu spin jauʧ."
+		"ipa": "bigda tini lif bin spin abu da jauʧ."
 	},
 	{
 		"english": "The cover of the basket fell to the floor.",
@@ -281,7 +281,7 @@
 	},
 	{
 		"english": "On the top of the hill in a little hut lived a wise old woman.",
-		"ipa": ""
+		"ipa": "tini dɪg bi abu da big dɪɲk. big bin bi abu da tini dɪg."
 	},
 	{
 		"english": "During our residence in the country we often walked in the pastures.",
@@ -301,7 +301,7 @@
 	},
 	{
 		"english": "Among the wheat grew tall red poppies.",
-		"ipa": ""
+		"ipa": "abu da lif bi big fru lif."
 	},
 	{
 		"english": "The strong roots of the oak trees were torn from the ground.",
@@ -309,11 +309,11 @@
 	},
 	{
 		"english": "The sun looked down through the branches upon the children at play.",
-		"ipa": ""
+		"ipa": "da puf jauʧ dɪ pik tu da tini bin. tini bin bi ful abu lif."
 	},
 	{
 		"english": "The west wind blew across my face like a friendly caress.",
-		"ipa": ""
+		"ipa": "da puf dɪ snugl mi snut."
 	},
 	{
 		"english": "The spool of thread rolled across the floor.",
@@ -325,11 +325,11 @@
 	},
 	{
 		"english": "I am very happy.",
-		"ipa": ""
+		"ipa": "mi bi big i."
 	},
 	{
 		"english": "These oranges are juicy.",
-		"ipa": ""
+		"ipa": "da nudfru frut bi brɛd bubl."
 	},
 	{
 		"english": "Sea water is salty.",
@@ -345,11 +345,11 @@
 	},
 	{
 		"english": "The fire feels hot.",
-		"ipa": ""
+		"ipa": "da jauʧ bi fuf."
 	},
 	{
 		"english": "The little girl seemed lonely.",
-		"ipa": ""
+		"ipa": "tini bin bi bu."
 	},
 	{
 		"english": "The little boy's father had once been a sailor.",
@@ -373,11 +373,11 @@
 	},
 	{
 		"english": "Their voices sound very happy.",
-		"ipa": ""
+		"ipa": "ʧu blab bi big i."
 	},
 	{
 		"english": "Is today Monday?",
-		"ipa": ""
+		"ipa": "bi 'Monday'?"
 	},
 	{
 		"english": "Have all the leaves fallen from the tree?",
@@ -393,7 +393,7 @@
 	},
 	{
 		"english": "Are you waiting for me?",
-		"ipa": ""
+		"ipa": "ja gɪb mi ja tim?"
 	},
 	{
 		"english": "Is this the first kitten of the litter?",
@@ -413,7 +413,7 @@
 	},
 	{
 		"english": "Sit here by me.",
-		"ipa": ""
+		"ipa": "sɪt abu mi."
 	},
 	{
 		"english": "Keep this secret until tomorrow.",
@@ -421,7 +421,7 @@
 	},
 	{
 		"english": "Come with us.",
-		"ipa": ""
+		"ipa": "jit abu ʧi."
 	},
 	{
 		"english": "Bring your friends with you.",
@@ -433,7 +433,7 @@
 	},
 	{
 		"english": "Have some tea.",
-		"ipa": ""
+		"ipa": "ja slərp."
 	},
 	{
 		"english": "Pip and his dog were great friends.",
@@ -445,7 +445,7 @@
 	},
 	{
 		"english": "You and I will go together.",
-		"ipa": ""
+		"ipa": "ʧi gəuna jit."
 	},
 	{
 		"english": "They opened all the doors and windows.",
@@ -453,7 +453,7 @@
 	},
 	{
 		"english": "He is small, but strong.",
-		"ipa": ""
+		"ipa": "bin bi tini. bin bi big."
 	},
 	{
 		"english": "Is this tree an oak or a maple?",
@@ -461,7 +461,7 @@
 	},
 	{
 		"english": "Does the sky look blue or gray?",
-		"ipa": ""
+		"ipa": "da puf bi blu? da puf bi tinipik?"
 	},
 	{
 		"english": "Come with your father or mother.",
@@ -469,7 +469,7 @@
 	},
 	{
 		"english": "I am tired, but very happy.",
-		"ipa": ""
+		"ipa": "mi bi mirmir. mi big i."
 	},
 	{
 		"english": "He played a tune on his wonderful flute.",
@@ -529,7 +529,7 @@
 	},
 	{
 		"english": "Aha! I have caught you!",
-		"ipa": ""
+		"ipa": "mi dɪ joɪɲk ja!"
 	},
 	{
 		"english": "This string is too short!",
@@ -545,11 +545,11 @@
 	},
 	{
 		"english": "Whew! that cold wind freezes my nose!",
-		"ipa": ""
+		"ipa": "da nɪp puf bi abu mi bupsnut!"
 	},
 	{
 		"english": "Are you warm enough now?",
-		"ipa": ""
+		"ipa": "ja dɪ bi nɪp. ja bi fuf?"
 	},
 	{
 		"english": "They heard the warning too late.",
@@ -561,11 +561,11 @@
 	},
 	{
 		"english": "All the children came except Mary.",
-		"ipa": ""
+		"ipa": "tini bin dɪ jit abu. 'Mary' dɪ nu bi."
 	},
 	{
 		"english": "Jack seized a handful of pebbles and threw them into the lake.",
-		"ipa": ""
+		"ipa": "'Jack' dɪ joɪɲk dɪɲk. 'Jack' dɪ jit dɪɲk tu bubl."
 	},
 	{
 		"english": "This cottage stood on a low hill, at some distance from the village.",
@@ -613,7 +613,7 @@
 	},
 	{
 		"english": "Hurry, children.",
-		"ipa": ""
+		"ipa": "zum, tini bin."
 	},
 	{
 		"english": "Madam, I will obey your command.",
@@ -633,11 +633,11 @@
 	},
 	{
 		"english": "Be quick or you will be too late.",
-		"ipa": ""
+		"ipa": "zum! ja gəuna forgor ja tim."
 	},
 	{
 		"english": "Will you go with us or wait here?",
-		"ipa": ""
+		"ipa": "ja gəuna jit abu ʧi? ja gəuna sɪt da?"
 	},
 	{
 		"english": "She was always, shabby, often ragged, and on cold days very uncomfortable.",
@@ -665,7 +665,7 @@
 	},
 	{
 		"english": "We will make this place our home.",
-		"ipa": ""
+		"ipa": "da gəuna bi ʧi dɪg."
 	},
 	{
 		"english": "The squirrels make their nests warm and snug with soft moss and leaves.",
@@ -749,19 +749,19 @@
 	},
 	{
 		"english": "Come when you are called.",
-		"ipa": ""
+		"ipa": "mi blab tu ja. ja jit tu mi."
 	},
 	{
 		"english": "I shall stay at home if it rains.",
-		"ipa": ""
+		"ipa": "da puf bubl gəuna bi? mi gəuna sɪt abu dɪg."
 	},
 	{
 		"english": "When he saw me, he stopped.",
-		"ipa": ""
+		"ipa": "da bin dɪ pik mi. da bin dɪ fin."
 	},
 	{
 		"english": "Do not laugh at me because I seem so absent minded.",
-		"ipa": ""
+		"ipa": "mi nu tɪɲk. ja nu kik."
 	},
 	{
 		"english": "I shall lend you the books that you need.",
@@ -769,7 +769,7 @@
 	},
 	{
 		"english": "Come early next Monday if you can.",
-		"ipa": ""
+		"ipa": "ja gəuna jit tu 'Monday' da. ja gəuna bi big tinitim?"
 	},
 	{
 		"english": "If you come early, wait in the hall.",
