@@ -173,6 +173,9 @@ class Build:
 	def words_to_links(self, ipas: str, relative_to: str = ".") -> str:
 		return self.word_regex.sub(lambda match: self.word_to_link(match[0], Build.ipa_to_orthography(match[0], self.orthography), tooltip=match[0], relative_to=relative_to), ipas)
 	
+	def words_to_latinization(self, ipas: str) -> str:
+		return self.word_regex.sub(lambda match: Build.ipa_to_orthography(match[0], self.latinization), ipas)
+	
 	def get_examples_for_word(self, ipa: str) -> list[Example]:
 		result: list[Example] = []
 		for example in self.examples:
@@ -232,7 +235,12 @@ class Build:
 						lambda match: (
 							Build.escape(match[1] + "\"") +
 							self.words_to_links(match[2]) +
-							Build.escape("\"" + match[3])
+							Build.escape(
+								"\" (" +
+								self.words_to_latinization(match[2]) +
+								")" +
+								match[3]
+							)
 						),
 						line
 					))
@@ -349,7 +357,7 @@ class Build:
 						if example.english is None: continue
 						elif example.ipa is None or example.ipa == "": continue
 						
-						stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa, relative_to='..')}</td>")
+						stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa, relative_to='..')}</td><td>({self.words_to_latinization(example.ipa)})</td>")
 					
 					stream.write("</table>")
 				
@@ -381,7 +389,7 @@ class Build:
 			for example in self.examples:
 				if example.english is None: continue
 				elif (example.ipa == "") or (example.ipa is None): continue
-				stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa)}</td></tr>")
+				stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa)}</td><td>({self.words_to_latinization(example.ipa)})</td></tr>")
 			
 			stream.write("</table></body></html>")
 	
