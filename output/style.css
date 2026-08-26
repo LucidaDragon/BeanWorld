@@ -13,6 +13,11 @@ a:hover
 	text-decoration: underline;
 }
 
+.audio-sample
+{
+	display: none;
+}
+
 @media (prefers-color-scheme: light)
 {
 	html, body
@@ -28,6 +33,11 @@ a:hover
 	}
 	
 	a, a:visited
+	{
+		color: #496cad;
+	}
+	
+	.audio-playback-button
 	{
 		color: #496cad;
 	}
@@ -48,6 +58,11 @@ a:hover
 	}
 	
 	a, a:visited
+	{
+		color: #84a9ec;
+	}
+	
+	.audio-playback-button
 	{
 		color: #84a9ec;
 	}

@@ -1,4 +1,6 @@
-import json, os, re, shutil, xml.dom.minidom
+import json, os, re, scipy.io.wavfile, shutil, xml.dom.minidom
+from pocket_tts import TTSModel
+from threading import Lock, Thread
 from typing import cast
 
 os.chdir(__file__[:__file__.replace("\\", "/").rindex("/")])
@@ -72,7 +74,7 @@ class Coverage:
 			print(f"Missing Translations: {', '.join(missing_translations)}")
 
 class Build:
-	def __init__(self, site_name: str, include: list[str], source_directory: str = "./src", output_directory: str = "./output", word_regex: re.Pattern = re.compile(r"(?:'[^']+')|[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
+	def __init__(self, site_name: str, include: list[str | tuple[str, str]], source_directory: str = "./src", output_directory: str = "./output", word_regex: re.Pattern = re.compile(r"(?:'[^']+')|[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
 		self.site_name = site_name
 		self.description_length = description_length
 		self.source_directory = source_directory
@@ -97,6 +99,12 @@ class Build:
 		with open(self.examples_source(), "r", encoding="utf-8") as stream:
 			self.examples: list[Example] = []
 			for example in json.load(stream): self.examples.append(Example(**example))
+		
+		self.audio_samples: dict[str, str] = {}
+		self.audio_threads: list[Thread] = []
+		self.audio_lock: Lock = Lock()
+		self.tts_model = TTSModel.load_model()
+		self.voice_state = self.tts_model.get_state_for_audio_prompt("cosette")
 	
 	def build(self) -> None:
 		shutil.rmtree(self.output_directory)
@@ -105,6 +113,9 @@ class Build:
 		self.build_examples()
 		self.build_dictionary()
 		self.build_files()
+		
+		for thread in self.audio_threads: thread.join()
+		self.audio_threads.clear()
 	
 	def coverage(self) -> Coverage:
 		return Coverage(self)
@@ -170,11 +181,50 @@ class Build:
 	def extract_words(self, ipas: str) -> list[str]:
 		return self.word_regex.findall(ipas)
 	
+	def create_audio(self, spoken: str):
+		self.audio_lock.acquire()
+		try:
+			return self.tts_model.generate_audio(self.voice_state, spoken)
+		finally:
+			self.audio_lock.release()
+	
 	def words_to_links(self, ipas: str, relative_to: str = ".") -> str:
 		return self.word_regex.sub(lambda match: self.word_to_link(match[0], Build.ipa_to_orthography(match[0], self.orthography), tooltip=match[0], relative_to=relative_to), ipas)
 	
 	def words_to_latinization(self, ipas: str) -> str:
 		return self.word_regex.sub(lambda match: Build.ipa_to_orthography(match[0], self.latinization), ipas)
+	
+	def words_to_audio_sample(self, ipas: str, relative_to: str, name_override: str | None = None) -> str:
+		spoken = self.words_to_latinization(ipas)
+		
+		import unicodedata
+		identifier = name_override if name_override is not None else re.sub(
+			r"[-\s]+",
+			"-",
+			re.sub(
+				r"[^\w\s-]",
+				"",
+				unicodedata.normalize("NFKC", spoken).lower()
+			)
+		).strip('-_')
+		
+		file = f"{identifier}.wav"
+		target = f"{relative_to}/{file}"
+		
+		if target in self.audio_samples: return self.audio_samples[target]
+		
+		def create(spoken: str, target: str) -> None:
+			scipy.io.wavfile.write(
+				target,
+				self.tts_model.sample_rate,
+				self.create_audio(spoken).numpy()
+			)
+		
+		self.audio_samples[target] = file
+		self.audio_threads.append(Thread(target=create, args=[spoken, target]))
+		self.audio_threads[-1].start()
+		
+		return file
 	
 	def get_examples_for_word(self, ipa: str) -> list[Example]:
 		result: list[Example] = []
@@ -188,7 +238,10 @@ class Build:
 	def get_html_header(page_title: str, group_title: str, description: str, type: str = "website", css: str = "style.css", **kwargs) -> str:
 		metadata = { "og:type": type, "og:title": page_title, "og:site_name": group_title, "og:description": description }
 		for key in kwargs: metadata[f"og:{key}"] = kwargs[key]
-		return f'<head><meta charset="UTF-8"><title>{Build.escape(page_title)} - {Build.escape(group_title)}</title><link rel="stylesheet" href="{Build.escape(css)}"><link rel="icon" type="image/png" href="https://lucidadragon.github.io/BeanWorld/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:image" content="https://lucidadragon.github.io/BeanWorld/favicon.png">' + "".join([f'<meta property="{Build.escape(key)}" content="{Build.escape(metadata[key])}">' for key in metadata]) + "</head>"
+		return f'<head><meta charset="UTF-8"><title>{Build.escape(page_title)} - {Build.escape(group_title)}</title><link rel="stylesheet" href="{Build.escape(css)}"><link rel="icon" type="image/png" href="https://lucidadragon.github.io/BeanWorld/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:image" content="https://lucidadragon.github.io/BeanWorld/favicon.png">' + "".join([f'<meta property="{Build.escape(key)}" content="{Build.escape(metadata[key])}">' for key in metadata]) + "<script src=\"samples.js\"></script></head>"
+	
+	def audio_to_html(self, ipas: str, relative_to: str, name_override: str | None = None) -> str:
+		return f"<audio class=\"audio-sample\" src=\"{self.words_to_audio_sample(ipas, relative_to, name_override)}\"></audio>"
 	
 	def markdown_to_html(self, md: str) -> str:
 		DEFAULT_MODE = "default"
@@ -235,8 +288,10 @@ class Build:
 						lambda match: (
 							Build.escape(match[1] + "\"") +
 							self.words_to_links(match[2]) +
+							Build.escape("\" ") +
+							self.audio_to_html(match[2], self.output_directory) +
 							Build.escape(
-								"\" (" +
+								" (" +
 								self.words_to_latinization(match[2]) +
 								")" +
 								match[3]
@@ -343,7 +398,10 @@ class Build:
 			with open(f"{self.dictionary_directory()}/{ipa}.html", "w", encoding="utf-8") as stream:
 				stream.write("<!DOCTYPE html><html>")
 				stream.write(self.get_html_header(Build.ipa_to_orthography(ipa, self.orthography), self.site_name, f"/{ipa}/ Definition & Examples", css="../style.css"))
-				stream.write(f'<body><h1>{Build.escape(Build.ipa_to_orthography(ipa, self.orthography))}</h1><p>/{Build.escape(ipa)}/ "{Build.escape(self.ipa_to_orthography(ipa, self.latinization))}"</p>')
+				stream.write(
+					f"<body><h1>{Build.escape(Build.ipa_to_orthography(ipa, self.orthography))}</h1>" +
+					f"<p>/{Build.escape(ipa)}/ \"{Build.escape(self.ipa_to_orthography(ipa, self.latinization))}\" {self.audio_to_html(ipa, self.dictionary_directory(), ipa)}</p>"
+				)
 				
 				for entry in self.dictionary[ipa]:
 					if not isinstance(entry.type, str): raise ValueError(f"Expected string in type field but got {str(entry.type)}.")
@@ -357,7 +415,7 @@ class Build:
 						if example.english is None: continue
 						elif example.ipa is None or example.ipa == "": continue
 						
-						stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa, relative_to='..')}</td><td>({self.words_to_latinization(example.ipa)})</td>")
+						stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa, relative_to='..')} {self.audio_to_html(example.ipa, self.dictionary_directory())}</td><td>({self.words_to_latinization(example.ipa)})</td>")
 					
 					stream.write("</table>")
 				
@@ -373,7 +431,13 @@ class Build:
 			stream.write("<body><h1>Dictionary</h1><p>See the <a href=\"../examples.html\">examples</a> for a list of examples.</p>")
 			
 			for ipa in self.dictionary:
-				stream.write(self.words_to_links(ipa, ".."))
+				stream.write(
+					self.words_to_links(ipa, "..") +
+					" - " +
+					" / ".join(
+						meaning.definition for meaning in self.dictionary[ipa]
+					)
+				)
 				stream.write("<br>")
 			
 			stream.write("</body></html>")
@@ -389,15 +453,17 @@ class Build:
 			for example in self.examples:
 				if example.english is None: continue
 				elif (example.ipa == "") or (example.ipa is None): continue
-				stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa)}</td><td>({self.words_to_latinization(example.ipa)})</td></tr>")
+				stream.write(f"<tr><td>{Build.escape(example.english)}</td><td>{self.words_to_links(example.ipa)} {self.audio_to_html(example.ipa, self.output_directory)}</td><td>({self.words_to_latinization(example.ipa)})</td></tr>")
 			
 			stream.write("</table></body></html>")
 	
 	def build_files(self) -> None:
 		os.makedirs(self.output_directory, exist_ok=True)
 		
-		for file in self.include: shutil.copyfile(f"{self.source_directory}/{file}", f"{self.output_directory}/{file}")
+		for file in self.include:
+			if isinstance(file, str): file = (file, file)
+			shutil.copyfile(f"{self.source_directory}/{file[0]}", f"{self.output_directory}/{file[1]}")
 
-build = Build("BeanWiki", ["style.css", "editor.html", "orthography.json", "dictionary.json"])
+build = Build("BeanWiki", ["style.css", "samples.js", ("samples.js", "dictionary/samples.js"), "editor.html", "orthography.json", "dictionary.json"])
 build.coverage().print()
 build.build()
