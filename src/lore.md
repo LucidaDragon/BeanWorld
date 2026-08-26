@@ -3,7 +3,7 @@
 ## Names
 Bean names are a sequence of consonant-vowel pairs that get longer as they age. Newly hatched beans receive a one syllable name. Additional syllables are added at key milestones in their life, including upon their first time foraging for food, reaching maturity or achieving matrimony, and becoming old enough to be a tribe elder.
 
-Bean names may be shortened in certain contexts. For example, a bean named `baguta` might be referred to as `bagu` by their mate or close friends, or as `ba` by their parents or family. If it is important to disambiguate a single or double syllable name from another, the name of one of the parents can be added as an adjunct before the name. For example, `baguta na` refers to `na`, the child of `baguta`.
+Bean names may be shortened in certain contexts. For example, a bean named `'baguta'` might be referred to as `'bagu'` by their mate or close friends, or as `'ba'` by their parents or family. If it is important to disambiguate a single or double syllable name from another, the name of one of the parents can be added as an adjunct before the name. For example, `'baguta' 'na'` refers to `'na'`, the child of `'baguta'`.
 
 ## Food
 While beans are omnivorous, the exact diet of a tribe varies depending on their environment. Across tribes, it is common for beans to limit themselves to food that can be eaten whole. Food is only dissected into smaller parts in exceptional circumstances, such as during famine.

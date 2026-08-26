@@ -8,7 +8,7 @@ Gimme more for all me friends `ʧu gɪb mi, mi gɪb bin`
 Dis banana flow will never end `ʧi bigtim gɪb`
 
 Do you want a banana? `mi gɪb nudl frut?`
-Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab mm-mmm mm-mmm`
+Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
 Do you want a banana? `mi gɪb nudl frut?`
 Dis banana for you `mi gɪb nudl frut`
 
@@ -22,6 +22,6 @@ Den we see dem in de night `ʧi pik big bin`
 Spirits jumping by de firelight `big bin abu spin jauʧ fuf`
 
 Do you want a banana? `mi gɪb nudl frut?`
-Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab mm-mmm mm-mmm`
+Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
 Do you want a banana? `mi gɪb nudl frut?`
 Dis banana for you `mi gɪb nudl frut`
