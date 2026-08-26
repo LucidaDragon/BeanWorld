@@ -72,7 +72,7 @@ class Coverage:
 			print(f"Missing Translations: {', '.join(missing_translations)}")
 
 class Build:
-	def __init__(self, site_name: str, include: list[str], source_directory: str = "./src", output_directory: str = "./output", word_regex: re.Pattern = re.compile(r"[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
+	def __init__(self, site_name: str, include: list[str], source_directory: str = "./src", output_directory: str = "./output", word_regex: re.Pattern = re.compile(r"(?:'[^']+')|[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
 		self.site_name = site_name
 		self.description_length = description_length
 		self.source_directory = source_directory
@@ -87,6 +87,9 @@ class Build:
 		
 		with open(self.orthography_source(), "r", encoding="utf-8") as stream:
 			self.orthography: dict[str, str] = json.load(stream)
+			self.phoneme_regex = re.compile(
+				"|".join(c for c in self.orthography)
+			)
 		
 		with open(self.latinization_source(), "r", encoding="utf-8") as stream:
 			self.latinization: dict[str, str] = json.load(stream)
@@ -158,8 +161,11 @@ class Build:
 	def word_to_link(self, ipa: str, text: str, tooltip: str | None = None, relative_to: str = ".") -> str:
 		if ipa.startswith("'") and ipa.endswith("'"): return f"<i>{Build.escape(text)}</i>"
 		def tooltip_attribute() -> str: return f"title=\"{Build.escape(cast(str, tooltip))}\" "
-		if ipa in self.dictionary: return f"<a {tooltip_attribute() if tooltip != None else ''}href=\"{Build.escape(relative_to)}{Build.escape(self.dictionary_directory()[len(self.output_directory):])}/{Build.escape(ipa.strip())}.html\">{Build.escape(text)}</a>"
-		else: return f"<u {tooltip_attribute() if tooltip != None else ''}>{Build.escape(text)}</u>"
+		if ipa in self.dictionary:
+			return f"<a {tooltip_attribute() if tooltip != None else ''}href=\"{Build.escape(relative_to)}{Build.escape(self.dictionary_directory()[len(self.output_directory):])}/{Build.escape(ipa.strip())}.html\">{Build.escape(text)}</a>"
+		else:
+			print(f"Warning: {ipa} is not a defined word.")
+			return f"<u {tooltip_attribute() if tooltip != None else ''}>{Build.escape(text)}</u>"
 	
 	def extract_words(self, ipas: str) -> list[str]:
 		return self.word_regex.findall(ipas)
@@ -220,9 +226,16 @@ class Build:
 					table_header_line = line
 					mode = TABLE_MODE
 				elif "`" in line:
-					line = Build.escape(line)
 					result.append("<p>" if is_tag() else "<br>")
-					result.append(re.sub(r"`([^`]*)`", lambda match: Build.escape("\"") + self.words_to_links(match[1]) + Build.escape("\""), line))
+					result.append(re.sub(
+						r"([^`]*)`([^`]*)`([^`]*)",
+						lambda match: (
+							Build.escape(match[1] + "\"") +
+							self.words_to_links(match[2]) +
+							Build.escape("\"" + match[3])
+						),
+						line
+					))
 					if is_tag(): result.append("")
 				else:
 					append_text(line)
@@ -249,7 +262,17 @@ class Build:
 					name = ".".join(file.split(".")[:-1])
 					with open(f"{self.output_directory}/{name}.html", "w", encoding="utf-8") as stream:
 						stream.write("<!DOCTYPE html><html>")
-						stream.write(Build.get_html_header(name.replace("_", " ").capitalize(), self.site_name, self.extract_html_description(html)))
+						stream.write(
+							Build.get_html_header(
+								" ".join(
+									word.capitalize()
+									for word in
+									name.replace("-", " ").split(" ")
+								),
+								self.site_name,
+								self.extract_html_description(html)
+							)
+						)
 						stream.write("<body>")
 						stream.write(html)
 						stream.write("</body></html>")
@@ -295,6 +318,7 @@ class Build:
 		
 		english_coverage: set[str] = set()
 		bean_variations: int = 0
+		used_phonemes: set[str] = set()
 		
 		for ipa in self.dictionary:
 			for entry in self.dictionary[ipa]:
@@ -304,6 +328,9 @@ class Build:
 				
 				for english in entry.translations: english_coverage.add(english.lower())
 				bean_variations += 1
+			
+			for match in self.phoneme_regex.findall(ipa):
+				used_phonemes.add(match.strip())
 			
 			with open(f"{self.dictionary_directory()}/{ipa}.html", "w", encoding="utf-8") as stream:
 				stream.write("<!DOCTYPE html><html>")
@@ -327,6 +354,10 @@ class Build:
 					stream.write("</table>")
 				
 				stream.write("</body></html>")
+		
+		for phoneme in self.orthography:
+			if phoneme in used_phonemes: continue
+			print(f"Warning: {phoneme} is unused.")
 		
 		with open(f"{self.dictionary_directory()}/index.html", "w", encoding="utf-8") as stream:
 			stream.write("<!DOCTYPE html><html>")
