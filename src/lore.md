@@ -8,7 +8,7 @@ Bean names may be shortened in certain contexts. For example, a bean named `'bag
 ## Food
 While beans are omnivorous, the exact diet of a tribe varies depending on their environment. Across tribes, it is common for beans to limit themselves to food that can be eaten whole. Food is only dissected into smaller parts in exceptional circumstances, such as during famine.
 
-This is expressed in the saying `snut tini, nu brɛd big` or `ja snut bi tini, ja nu brɛd big da` which directly translated means "Your mouth is small, you don't eat big things", or more indirectly "Don't eat what doesn't fit in your mouth".
+This is expressed in the saying `snut tini, nu nəm big` or `ja snut bi tini, ja nu nəm big da` which directly translated means "Your mouth is small, you don't eat big things", or more indirectly "Don't eat what doesn't fit in your mouth".
 
 ## Settlements
 ### Terrestrial

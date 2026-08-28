@@ -1,5 +1,5 @@
 Do you see banana man? `ja pik nudl frut bin?`
-Hopping over on de white hot sand `ʧu jit bigpik fuf dɪɲk`
+Hopping over on de white hot sand `ʧu jit bigpik fuf stif`
 Here he come with some for me `ʧu bin jit mi`
 Freshly taken from banana tree `nudl frut lif gɪb ʧu`
 Banana man, me want a ton `nudl frut bin big gɪb`
@@ -8,7 +8,7 @@ Gimme more for all me friends `ʧu gɪb mi, mi gɪb bin`
 Dis banana flow will never end `ʧi bigtim gɪb`
 
 Do you want a banana? `mi gɪb nudl frut?`
-Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
+Peel it down and go, mm-mmm mm-mmm `ja nəm nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
 Do you want a banana? `mi gɪb nudl frut?`
 Dis banana for you `mi gɪb nudl frut`
 
@@ -22,6 +22,6 @@ Den we see dem in de night `ʧi pik big bin`
 Spirits jumping by de firelight `big bin abu spin jauʧ fuf`
 
 Do you want a banana? `mi gɪb nudl frut?`
-Peel it down and go, mm-mmm mm-mmm `ja brɛd nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
+Peel it down and go, mm-mmm mm-mmm `ja nəm nudl frut, ja blab 'mm'-'mmm' 'mm'-'mmm'`
 Do you want a banana? `mi gɪb nudl frut?`
 Dis banana for you `mi gɪb nudl frut`
