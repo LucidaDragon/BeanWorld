@@ -32,8 +32,11 @@ Bean medicine is very primitive and largely revolves around the consumption or a
 Beans will often wear crowns of flowers to enhance or contrast their natural coloring. Some types of crowns are reserved for special occassions, such as the bright white flower crown or the cyan flower crown.
 
 ## Celebrations & Festivals
+### Forage Day
+Once a bean is old enough, the tribe celebrates by letting them forage for food on their own for the first time. The newly matured bean spends the majority of the day collecting food, after which the tribe has a feast and bestows a lengthened name upon them.
 
-## Art
+### Blossom Festival
+At the start of the wet or spring season, tribes will often celebrate the coming bloom by decorating their settlements and playing games.
 
 ## Games
 ### "Touch Fruit"
