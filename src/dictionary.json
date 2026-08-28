@@ -110,23 +110,6 @@
 			"translations": ["growl", "growls", "roar", "roars", "shout", "shouts", "scream", "screams", "cry", "cries"]
 		}
 	],
-	"brɛd": [
-		{
-			"definition": "An edible thing.",
-			"type": "adjective",
-			"translations": ["edible", "tasty", "delicious", "yummy"]
-		},
-		{
-			"definition": "Food or sustinance.",
-			"type": "noun",
-			"translations": ["food", "sustinance", "breakfast", "lunch", "dinner", "snack"]
-		},
-		{
-			"definition": "To consume or digest.",
-			"type": "verb",
-			"translations": ["eat", "consume", "digest", "snack", "devour"]
-		}
-	],
 	"bu": [
 		{
 			"definition": "An unenjoyable thing or a thing that does not enjoy.",
@@ -588,6 +571,23 @@
 			"definition": "Cool or cold.",
 			"type": "adjective",
 			"translations": ["cold", "cool"]
+		}
+	],
+	"nəm": [
+		{
+			"definition": "An edible thing.",
+			"type": "adjective",
+			"translations": ["edible", "tasty", "delicious", "yummy"]
+		},
+		{
+			"definition": "Food or sustinance.",
+			"type": "noun",
+			"translations": ["food", "sustinance", "breakfast", "lunch", "dinner", "snack"]
+		},
+		{
+			"definition": "To consume or digest.",
+			"type": "verb",
+			"translations": ["eat", "consume", "digest", "snack", "devour"]
 		}
 	],
 	"pab": [
