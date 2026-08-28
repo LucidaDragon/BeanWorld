@@ -74,7 +74,7 @@ class Coverage:
 			print(f"Missing Translations: {', '.join(missing_translations)}")
 
 class Build:
-	def __init__(self, site_name: str, include: list[str | tuple[str, str]], source_directory: str = "./src", output_directory: str = "./output", word_regex: re.Pattern = re.compile(r"(?:'[^']+')|[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
+	def __init__(self, site_name: str, include: list[str | tuple[str, str]], source_directory: str = "./src", output_directory: str = "./site", word_regex: re.Pattern = re.compile(r"(?:'[^']+')|[^\0-\46\50-\100\133-\140\173-\177]+"), description_length: int = 200) -> None:
 		self.site_name = site_name
 		self.description_length = description_length
 		self.source_directory = source_directory
