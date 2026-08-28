@@ -195,7 +195,13 @@ class Build:
 		return self.word_regex.sub(lambda match: Build.ipa_to_orthography(match[0], self.latinization), ipas)
 	
 	def words_to_audio_sample(self, ipas: str, relative_to: str, name_override: str | None = None) -> str:
-		spoken = self.words_to_latinization(ipas)
+		spoken_uid = self.words_to_latinization(ipas)
+		
+		spoken = re.sub(
+			r"\bbeen\b",
+			"bean",
+			spoken_uid
+		)
 		
 		import unicodedata
 		identifier = name_override if name_override is not None else re.sub(
@@ -204,7 +210,7 @@ class Build:
 			re.sub(
 				r"[^\w\s-]",
 				"",
-				unicodedata.normalize("NFKC", spoken).lower()
+				unicodedata.normalize("NFKC", spoken_uid).lower()
 			)
 		).strip('-_')
 		
