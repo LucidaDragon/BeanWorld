@@ -110,23 +110,6 @@
 			"translations": ["growl", "growls", "roar", "roars", "shout", "shouts", "scream", "screams", "cry", "cries"]
 		}
 	],
-	"brɛd": [
-		{
-			"definition": "An edible thing.",
-			"type": "adjective",
-			"translations": ["edible", "tasty", "delicious", "yummy"]
-		},
-		{
-			"definition": "Food or sustinance.",
-			"type": "noun",
-			"translations": ["food", "sustinance", "breakfast", "lunch", "dinner", "snack"]
-		},
-		{
-			"definition": "To consume or digest.",
-			"type": "verb",
-			"translations": ["eat", "consume", "digest", "snack", "devour"]
-		}
-	],
 	"bu": [
 		{
 			"definition": "An unenjoyable thing or a thing that does not enjoy.",
@@ -227,18 +210,6 @@
 			"definition": "To shelter.",
 			"type": "verb",
 			"translations": ["shelter", "shelters", "cover", "covers", "hide", "hides", "protect", "protects"]
-		}
-	],
-	"dɪɲk": [
-		{
-			"definition": "Hard or unyielding.",
-			"type": "adjective",
-			"translations": ["hard", "stiff", "unyielding"]
-		},
-		{
-			"definition": "Rock or ground.",
-			"type": "noun",
-			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
 		}
 	],
 	"ɛg": [
@@ -465,7 +436,7 @@
 			"translations": ["go", "goes", "throw", "throws", "travel", "travels", "run", "runs"]
 		}
 	],
-	"joɪɲk": [
+	"joɪnk": [
 		{
 			"definition": "To take or grab.",
 			"type": "verb",
@@ -590,6 +561,23 @@
 			"translations": ["cold", "cool"]
 		}
 	],
+	"nəm": [
+		{
+			"definition": "An edible thing.",
+			"type": "adjective",
+			"translations": ["edible", "tasty", "delicious", "yummy"]
+		},
+		{
+			"definition": "Food or sustinance.",
+			"type": "noun",
+			"translations": ["food", "sustinance", "breakfast", "lunch", "dinner", "snack"]
+		},
+		{
+			"definition": "To consume or digest.",
+			"type": "verb",
+			"translations": ["eat", "consume", "digest", "snack", "devour"]
+		}
+	],
 	"pab": [
 		{
 			"definition": "A foot or paw.",
@@ -670,14 +658,14 @@
 			"translations": ["leg", "legs"]
 		}
 	],
-	"skiɲgi": [
+	"skingi": [
 		{
 			"definition": "Smelly or stinky.",
 			"type": "adjective",
 			"translations": ["smelly", "stinky"]
 		}
 	],
-	"skiɲgɪs": [
+	"skingɪs": [
 		{
 			"definition": "Disgusting or yucky.",
 			"type": "adjective",
@@ -734,6 +722,18 @@
 			"translations": ["scary", "concerning", "unnerving", "creepy"]
 		}
 	],
+	"stif": [
+		{
+			"definition": "Hard or unyielding.",
+			"type": "adjective",
+			"translations": ["hard", "stiff", "unyielding"]
+		},
+		{
+			"definition": "Rock or ground.",
+			"type": "noun",
+			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
+		}
+	],
 	"tap": [
 		{
 			"definition": "To select or mark.",
@@ -748,7 +748,7 @@
 			"translations": ["sometimes"]
 		}
 	],
-	"tɪɲk": [
+	"tɪnk": [
 		{
 			"definition": "To think or ponder.",
 			"type": "verb",
