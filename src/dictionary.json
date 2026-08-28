@@ -212,18 +212,6 @@
 			"translations": ["shelter", "shelters", "cover", "covers", "hide", "hides", "protect", "protects"]
 		}
 	],
-	"dɪɲk": [
-		{
-			"definition": "Hard or unyielding.",
-			"type": "adjective",
-			"translations": ["hard", "stiff", "unyielding"]
-		},
-		{
-			"definition": "Rock or ground.",
-			"type": "noun",
-			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
-		}
-	],
 	"ɛg": [
 		{
 			"definition": "An egg or unborn child.",
@@ -732,6 +720,18 @@
 			"definition": "A scary or unnerving thing.",
 			"type": "adjective",
 			"translations": ["scary", "concerning", "unnerving", "creepy"]
+		}
+	],
+	"stif": [
+		{
+			"definition": "Hard or unyielding.",
+			"type": "adjective",
+			"translations": ["hard", "stiff", "unyielding"]
+		},
+		{
+			"definition": "Rock or ground.",
+			"type": "noun",
+			"translations": ["rock", "rocks", "ground", "grounds", "boulder", "boulders", "pebble", "pebbles", "stone", "stones", "earth", "dirt"]
 		}
 	],
 	"tap": [
