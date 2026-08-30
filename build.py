@@ -198,9 +198,13 @@ class Build:
 		spoken_uid = self.words_to_latinization(ipas)
 		
 		spoken = re.sub(
-			r"\bbeen\b",
-			"bean",
-			spoken_uid
+			r"\bdi\b",
+			"dih",
+			re.sub(
+				r"\bbeen\b",
+				"bean",
+				spoken_uid
+			)
 		)
 		
 		import unicodedata
